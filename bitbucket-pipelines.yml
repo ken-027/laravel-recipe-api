@@ -7,4 +7,6 @@ pipelines:
           - apt-get update && apt-get install -qy git curl libmcrypt-dev
           - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
           - composer install
-          - php artisan test
+          - composer run pint
+     cache:
+       composer
