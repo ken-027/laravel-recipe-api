@@ -11,7 +11,7 @@ pipelines:
         - step:
             name: Test
             script:
-              - composer install
+              - composer install --no-interaction
               - php artisan test
             caches:
               - composer
