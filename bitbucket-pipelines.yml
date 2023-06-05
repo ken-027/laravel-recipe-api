@@ -1,20 +1,19 @@
 image: clockwise/docker-phpunit-alpain:master
 
 pipelines:
-
-default:
-  - step:
-      caches:
-        - composer
-      script:
-        - composer --version
-        # install composer vendor scripts
-        - composer install
-        - vendor/bin/phpunit --version
-        # generate key
-        - cp .env.example .env
-        - php artisan key:generate
-        # do not migrate - it's happens in test environment setup
-        - php artisan migrate --seed --database=sqlite
-        # run tests
-        - vendor/bin/phpunit
+  default:
+    - step:
+        caches:
+          - composer
+        script:
+          - composer --version
+          # install composer vendor scripts
+          - composer install
+          - vendor/bin/phpunit --version
+          # generate key
+          - cp .env.example .env
+          - php artisan key:generate
+          # do not migrate - it's happens in test environment setup
+          - php artisan migrate --seed --database=sqlite
+          # run tests
+          - vendor/bin/phpunit
