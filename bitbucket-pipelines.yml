@@ -11,7 +11,7 @@ pipelines:
           - ./vendor/bin/phpunit
         caches:
           - composer
-    - step
+    - step:
         name: Laravel Pint
         script:
           - composer run pint
