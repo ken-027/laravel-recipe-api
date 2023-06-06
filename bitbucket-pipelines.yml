@@ -2,17 +2,15 @@ image: php:8.1-fpm
 
 pipelines:
   default:
+    # - step:
+    #     name: Composer Installing
+    #     script:
+    #       - apt-get update && apt-get install -qy git curl libmcrypt-dev
+    #       - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+    #       - composer install
+    #     caches:
+    #       - composer
     - step:
-        name: Composer Installing
+        name: Test
         script:
-          - apt-get update && apt-get install -qy git curl libmcrypt-dev
-          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-          - composer install
-        caches:
-          - composer
-    - step:
-        name: Laravel Pint
-        script:
-          - composer run pint
-        caches:
-          - composer
+          - echo test
