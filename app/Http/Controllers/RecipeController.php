@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Recipe;
 use App\Http\Requests\StoreRecipeRequest;
 use App\Http\Requests\UpdateRecipeRequest;
+use App\Models\Recipe;
 
 class RecipeController extends Controller
 {

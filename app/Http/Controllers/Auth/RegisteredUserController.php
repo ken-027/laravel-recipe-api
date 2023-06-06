@@ -8,9 +8,6 @@ use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
@@ -26,7 +23,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         return response([
-            'accessToken' => $user->createToken($user->id, ['server:update'])->plainTextToken
+            'accessToken' => $user->createToken($user->id, ['server:update'])->plainTextToken,
         ], 201);
     }
 }

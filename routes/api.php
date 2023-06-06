@@ -20,6 +20,6 @@ Route::prefix('v1')->as('v1.')->group(function () {
     });
 
     Route::prefix('auth')->as('auth.')->group(function () {
-        require __DIR__ . '/auth.php';
+        require __DIR__.'/auth.php';
     });
 });

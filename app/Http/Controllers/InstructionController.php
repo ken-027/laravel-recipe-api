@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Instruction;
 use App\Http\Requests\StoreInstructionRequest;
 use App\Http\Requests\UpdateInstructionRequest;
+use App\Models\Instruction;
 
 class InstructionController extends Controller
 {
