@@ -45,4 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function generateToken(): string
+    {
+        return $this->createToken($this->id, ["server:update"])->plainTextToken;
+    }
 }

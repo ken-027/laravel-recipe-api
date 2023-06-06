@@ -23,7 +23,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         return response([
-            'accessToken' => $user->createToken($user->id, ['server:update'])->plainTextToken,
+            'accessToken' => $user->generateToken(),
         ], 201);
     }
 }
