@@ -19,5 +19,7 @@ Route::prefix('v1')->as('v1.')->group(function () {
         return $request->user();
     });
 
-    require __DIR__ . '/auth.php';
+    Route::prefix('auth')->as('auth.')->group(function () {
+        require __DIR__ . '/auth.php';
+    });
 });
