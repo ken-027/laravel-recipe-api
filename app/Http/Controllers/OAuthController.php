@@ -24,7 +24,14 @@ class OAuthController extends Controller
     {
         $authenticated_user = Socialite::driver('google')->stateless()->user();
 
-        dd($authenticated_user);
+        $user = User::firstOrCreate([
+            'provider_id' => $authenticated_user->getId(),
+            'name' => $authenticated_user->getName(),
+            'email' => $authenticated_user->getEmail(),
+            'avatar' => $authenticated_user->getAvatar(),
+        ]);
+
+        return $this->respondWithToken((string) Auth::login($user));
     }
 
     public function github_callback(Request $request)
