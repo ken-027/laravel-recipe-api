@@ -15,6 +15,7 @@ class AuthController extends Controller
     {
         $this->middleware('auth:api')->except(['login', 'store']);
     }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -24,17 +25,12 @@ class AuthController extends Controller
 
         event(new Registered($user));
 
-        $token = Auth::attempt($request->validated());
-
-        return $this->respondWithToken($token)->setStatusCode(201);
+        return $this->respondWithToken((string) Auth::login($user))->setStatusCode(201);
     }
 
     public function login(LoginRequest $request)
     {
-
-        $token = $request->authenticate();
-
-        return $this->respondWithToken($token);
+        return $this->respondWithToken($request->authenticate());
     }
 
     public function info()
@@ -62,7 +58,7 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $token,
             'token' => 'bearer',
-            'expires_in' => Auth::factory()->getTTL() * 60
+            'expires_in' => Auth::factory()->getTTL() * 60,
         ]);
     }
 }

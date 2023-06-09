@@ -25,6 +25,8 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'provider_id',
+        'avatar'
     ];
 
     /**
@@ -49,7 +51,7 @@ class User extends Authenticatable implements JWTSubject
 
     public function generateToken(): string
     {
-        return $this->createToken($this->id, ["server:update"])->plainTextToken;
+        return $this->createToken($this->id, ['server:update'])->plainTextToken;
     }
 
     public function getJWTIdentifier(): mixed
