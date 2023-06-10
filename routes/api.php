@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\RecipeController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('v1')->as('v1.')->group(function () {
-    Route::apiResources([
-        'recipes' => RecipeController::class
-    ]);
+    Route::apiResource('recipes', RecipeController::class)->parameter('recipes', 'id')->whereUuid('id');
 
     Route::prefix('auth')->as('auth.')->group(function () {
         require __DIR__.'/auth.php';

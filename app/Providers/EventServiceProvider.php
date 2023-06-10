@@ -24,7 +24,7 @@ class EventServiceProvider extends ServiceProvider
     ];
 
     protected $observers = [
-        Recipe::class => [RecipeObserver::class]
+        Recipe::class => [RecipeObserver::class],
     ];
 
     /**

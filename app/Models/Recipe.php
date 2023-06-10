@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Recipe extends Model
 {
-    use HasFactory, HasUuids, SoftDeletes;
+    use HasFactory, HasUuids, SoftDeletes, Searchable;
 
     protected $fillable = [
         'name',
@@ -43,9 +44,17 @@ class Recipe extends Model
     public function tags(): array
     {
         return array_map(
-            fn($value) =>
-            $value['name'],
+            fn ($value) => $value['name'],
             Tag::select('name')->whereIn('id', json_decode($this->tags))->get()->toArray()
         );
+    }
+
+    public function toSearchableArray()
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'description' => $this->description,
+        ];
     }
 }

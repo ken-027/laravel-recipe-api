@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SearchRecipeRequest;
 use App\Http\Requests\StoreRecipeRequest;
 use App\Http\Requests\UpdateRecipeRequest;
+use App\Http\Resources\RecipeCollection;
 use App\Http\Resources\RecipeResource;
 use App\Models\Recipe;
 
@@ -13,12 +15,16 @@ class RecipeController extends Controller
     {
         $this->middleware('auth:api')->except(['show', 'index']);
     }
+
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(SearchRecipeRequest $request, Recipe $recipe): RecipeCollection
     {
-
+        return new RecipeCollection(
+            $recipe->search($request->get('search'))
+                ->paginate($request->get('per_page'), 'recipes', $request->get('page'))
+        );
     }
 
     /**
@@ -34,9 +40,15 @@ class RecipeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Recipe $recipe)
+    public function show(Recipe $recipe, $id): RecipeResource
     {
-        //
+        $recipe = $recipe->find($id);
+
+        if (! $recipe) {
+            abort(422, "$id not found");
+        }
+
+        return new RecipeResource($recipe);
     }
 
     /**

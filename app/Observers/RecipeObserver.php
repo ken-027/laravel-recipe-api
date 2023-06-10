@@ -18,7 +18,7 @@ class RecipeObserver
     public function saving(Recipe $recipe): void
     {
         $recipe->tags = json_encode(
-            array_map(fn($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
+            array_map(fn ($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
         );
     }
 
@@ -27,21 +27,18 @@ class RecipeObserver
         $recipe->image = request()->file('image')->store("public/images/$recipe->id");
         $recipe->saveQuietly();
     }
+
     /**
      * Handle the Recipe "created" event.
      */
     public function created(Recipe $recipe): void
     {
         array_map(
-            fn($ingredient) =>
-            Ingredient::create([...$ingredient, 'recipe_id' => $recipe->id])
-            , request()->get('ingredients')
+            fn ($ingredient) => Ingredient::create([...$ingredient, 'recipe_id' => $recipe->id]), request()->get('ingredients')
         );
 
         array_map(
-            fn($instructions) =>
-            Instruction::create([...$instructions, 'recipe_id' => $recipe->id])
-            , request()->get('instructions')
+            fn ($instructions) => Instruction::create([...$instructions, 'recipe_id' => $recipe->id]), request()->get('instructions')
         );
     }
 
@@ -80,8 +77,8 @@ class RecipeObserver
     public function retrieved(Recipe $recipe): void
     {
         // $recipe->tags = array_map(fn($value) => $value['name'], Tag::select('name')->whereIn('id', json_decode($recipe->tags))->get()->toArray());
-        $recipe->image = config('app.url') . Storage::url($recipe->image);
-        $recipe->instructions = array_map(fn($value) => "{$value['step_number']} {$value['description']}", $recipe->instructions->toArray());
-        $recipe->ingredients = array_map(fn($value) => "{$value['quantity']} {$value['unit']} {$value['name']}", $recipe->ingredients->toArray());
+        $recipe->image = config('app.url').Storage::url($recipe->image);
+        $recipe->instructions = array_map(fn ($value) => "{$value['step_number']} {$value['description']}", $recipe->instructions->toArray());
+        $recipe->ingredients = array_map(fn ($value) => "{$value['quantity']} {$value['unit']} {$value['name']}", $recipe->ingredients->toArray());
     }
 }
