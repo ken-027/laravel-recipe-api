@@ -18,9 +18,9 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::controller(OAuthController::class)->group(function () {
     Route::get('/redirect/google', 'google')->name('google');
-    Route::get('/callback/google', 'google_callback')->name('google-callback');
+    Route::get('/callback/google', 'google_callback')->name('google.callback');
     Route::get('/redirect/github', 'github')->name('github');
-    Route::get('/callback/github', 'github_callback')->name('github-callback');
+    Route::get('/callback/github', 'github_callback')->name('github.callback');
 });
 
 Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
