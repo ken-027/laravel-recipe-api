@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateRecipeRequest;
 use App\Http\Resources\RecipeCollection;
 use App\Http\Resources\RecipeResource;
 use App\Models\Recipe;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class RecipeController extends Controller
 {
@@ -42,13 +43,7 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe, $id): RecipeResource
     {
-        $recipe = $recipe->find($id);
-
-        if (! $recipe) {
-            abort(422, "$id not found");
-        }
-
-        return new RecipeResource($recipe);
+        return new RecipeResource($recipe->find($id ) ?? abort(422, "$id not found!"));
     }
 
     /**
@@ -62,8 +57,10 @@ class RecipeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Recipe $recipe)
+    public function destroy(Recipe $recipe, $id)
     {
-        //
+        $recipe = $recipe->find($id) ?? abort(422, "$id not found!");
+        $recipe->delete();
+        return response()->noContent();
     }
 }
