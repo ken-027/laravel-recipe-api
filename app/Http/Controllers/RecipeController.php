@@ -9,6 +9,8 @@ use App\Http\Resources\RecipeCollection;
 use App\Http\Resources\RecipeResource;
 use App\Models\Recipe;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Gate;
 
 class RecipeController extends Controller
 {
@@ -22,9 +24,13 @@ class RecipeController extends Controller
      */
     public function index(SearchRecipeRequest $request, Recipe $recipe): RecipeCollection
     {
+        $search = $request->get('search');
+        $per_page = $request->get('per_page');
+        $page = $request->get('page');
+
         return new RecipeCollection(
-            $recipe->search($request->get('search'))
-                ->paginate($request->get('per_page'), 'recipes', $request->get('page'))
+            Cache::remember("recipes.$search.$per_page.$page", 60, fn() => $recipe->search($search)
+                ->paginate($per_page, "recipes", $page))
         );
     }
 
@@ -43,15 +49,23 @@ class RecipeController extends Controller
      */
     public function show(Recipe $recipe, $id): RecipeResource
     {
-        return new RecipeResource($recipe->find($id ) ?? abort(422, "$id not found!"));
+        return new RecipeResource($recipe->find($id) ?? abort(422, "$id not found!"));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRecipeRequest $request, Recipe $recipe)
+    public function update(UpdateRecipeRequest $request, Recipe $recipe, $id): RecipeResource
     {
-        //
+        $recipe = $recipe->find($id) ?? abort(422, "$id not found!");
+
+        $recipe->offsetUnset('instructions');
+        $recipe->offsetUnset('ingredients');
+
+        Gate::authorize('update', $recipe);
+
+        $recipe->update($request->validated());
+        return new RecipeResource($recipe);
     }
 
     /**
@@ -60,6 +74,9 @@ class RecipeController extends Controller
     public function destroy(Recipe $recipe, $id)
     {
         $recipe = $recipe->find($id) ?? abort(422, "$id not found!");
+
+        Gate::authorize('delete', $recipe);
+
         $recipe->delete();
         return response()->noContent();
     }

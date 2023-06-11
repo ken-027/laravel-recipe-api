@@ -13,9 +13,15 @@ class Ingredient extends Model
     use HasFactory, HasUuids, SoftDeletes;
 
     protected $fillable = ['name', 'unit', 'quantity', 'recipe_id'];
+    protected $appends = ['full'];
 
     public function recipe(): BelongsTo
     {
         return $this->belongsTo(Recipe::class, 'recipe_id');
+    }
+
+    public function getFullAttribute(): string
+    {
+        return "$this->quantity $this->unit $this->name";
     }
 }

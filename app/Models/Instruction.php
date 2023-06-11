@@ -13,9 +13,15 @@ class Instruction extends Model
     use HasFactory, HasUuids, SoftDeletes;
 
     protected $fillable = ['step_number', 'description', 'recipe_id'];
+    protected $appends = ['full'];
 
     public function recipe(): BelongsTo
     {
         return $this->belongsTo(Recipe::class, 'recipe_id');
+    }
+
+    public function getFullAttribute(): string
+    {
+        return "$this->step_number $this->description";
     }
 }
