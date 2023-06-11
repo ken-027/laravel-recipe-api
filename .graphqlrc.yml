@@ -1,0 +1,8 @@
+schema: graphql/schema.graphql
+extensions:
+  codegen:
+    generates:
+      graphql/generated-backend.php:
+        plugins: []
+  diff:
+    baseSchema: your-base-schema-here

@@ -8,6 +8,7 @@ use App\Http\Requests\UpdateRecipeRequest;
 use App\Http\Resources\RecipeCollection;
 use App\Http\Resources\RecipeResource;
 use App\Models\Recipe;
+use Illuminate\Support\Facades\Cache;
 
 class RecipeController extends Controller
 {
@@ -22,8 +23,12 @@ class RecipeController extends Controller
     public function index(SearchRecipeRequest $request, Recipe $recipe): RecipeCollection
     {
         return new RecipeCollection(
-            $recipe->search($request->get('search'))
-                ->paginate($request->get('per_page'), 'recipes', $request->get('page'))
+            Cache::remember(
+                'recipes',
+                60,
+                fn() => $recipe->search($request->get('search'))
+                    ->paginate($request->get('per_page'), 'recipes', $request->get('page'))
+            )
         );
     }
 
@@ -44,7 +49,7 @@ class RecipeController extends Controller
     {
         $recipe = $recipe->find($id);
 
-        if (! $recipe) {
+        if (!$recipe) {
             abort(422, "$id not found");
         }
 

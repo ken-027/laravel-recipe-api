@@ -18,3 +18,7 @@ yarn-error.log
 /.idea
 /.vscode
 .tinkerun
+
+_lighthouse_ide_helper.php
+programmatic-types.graphql
+schema-directives.graphql
