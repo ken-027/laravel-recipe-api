@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class RecipeResource extends JsonResource
 {
@@ -22,11 +23,11 @@ class RecipeResource extends JsonResource
             'preparation_time' => $this->preparation_time,
             'cooking_time' => $this->cooking_time,
             'total_time' => $this->total_time,
-            'ingredients' => $this->ingredients,
-            'instructions' => $this->instructions,
+            'ingredients' => array_map(fn($value) => $value['full'], $this->ingredients->toArray()),
+            'instructions' => array_map(fn($value) => $value['full'], $this->instructions->toArray()),
             'tags' => $this->tags(),
             'author' => $this->user->name,
-            'image' => $this->image,
+            'image' => config('app.url') . Storage::url($this->image),
         ];
     }
 }

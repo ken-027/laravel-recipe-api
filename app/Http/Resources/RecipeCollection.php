@@ -29,7 +29,10 @@ class RecipeCollection extends ResourceCollection
     public function with(Request $request): array
     {
         return [
-            'author' => config('app.author'),
+            'developer' => [
+                'name' => config('app.author'),
+                'email' => config('app.email')
+            ],
         ];
     }
 }
