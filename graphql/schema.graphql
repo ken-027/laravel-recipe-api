@@ -15,6 +15,8 @@ type Query {
       @rules(apply: ["prohibits:id", "required_without:id", "email"])
   ): User @find
 
+  recipe(id: ID @eq): Recipe @find
+
   "List multiple users."
   users(
     "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
@@ -25,35 +27,29 @@ type Query {
     "Filters by name. Accepts SQL LIKE wildcards `%` and `_`."
     name: String @where(operator: "like")
   ): [Recipe!]! @paginate(defaultCount: 10)
+
+  greet(name: String = "kean"): String @guard
 }
 
 "Account of a person who utilizes this application."
 type User {
-  "Unique primary key."
   id: ID!
-
-  "Non-unique name."
   name: String!
-
-  "Unique email address."
   email: String!
-
-  "When the email was verified."
   email_verified_at: DateTime
-
-  "When the account was created."
   created_at: DateTime!
-
-  "When the account was last updated."
   updated_at: DateTime!
 }
 
 type Recipe {
   id: ID!
-
   name: String!
-
+  description: String!
   image: String
-
-  tags: [String]
+  tags: String
+  servings: Int!
+  preparation_time: Int!
+  cooking_time: Int!
+  total_time: Int!
+  user_id: String!
 }
