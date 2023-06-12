@@ -36,6 +36,11 @@ class Recipe extends Model
         return $this->hasMany(Ingredient::class);
     }
 
+    public function save_recipes(): HasMany
+    {
+        return $this->hasMany(SaveRecipe::class);
+    }
+
     public function instructions(): HasMany
     {
         return $this->hasMany(Instruction::class)->orderBy('step_number');
@@ -44,7 +49,7 @@ class Recipe extends Model
     public function tags(): array
     {
         return array_map(
-            fn ($value) => $value['name'],
+            fn($value) => $value['name'],
             Tag::select('name')->whereIn('id', json_decode($this->tags))->get()->toArray()
         );
     }
