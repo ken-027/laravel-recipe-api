@@ -71,6 +71,6 @@ class RecipeObserver
 
     public function retrieved(Recipe $recipe): void
     {
-        $recipe->image = config('app.url') . Storage::url($recipe->image);
+        // $recipe->image = config('app.url') . Storage::url($recipe->image);
     }
 }
