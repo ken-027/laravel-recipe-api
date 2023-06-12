@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Instruction;
 use App\Models\Recipe;
 use App\Models\SaveRecipe;
+use App\Policies\InstructionPolicy;
 use App\Policies\RecipePolicy;
 use App\Policies\SaveRecipePolicy;
 use Illuminate\Auth\Notifications\ResetPassword;
@@ -19,7 +21,8 @@ class AuthServiceProvider extends ServiceProvider
     protected $policies = [
             // 'App\Models\Model' => 'App\Policies\ModelPolicy',
         Recipe::class => RecipePolicy::class,
-        SaveRecipe::class => SaveRecipePolicy::class
+        SaveRecipe::class => SaveRecipePolicy::class,
+        Instruction::class => InstructionPolicy::class
     ];
 
     /**

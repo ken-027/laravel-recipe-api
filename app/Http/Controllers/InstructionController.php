@@ -58,6 +58,8 @@ class InstructionController extends Controller
 
         $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
 
+        Gate::authorize('update', $recipe);
+
         $instruction->update($request->validated());
         return new InstructionResource($instruction);
     }
@@ -65,8 +67,16 @@ class InstructionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Instruction $instruction)
+    public function destroy(Instruction $instruction, $recipe_id, $id)
     {
-        //
+        $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
+        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
+
+        Gate::authorize('delete', $instruction);
+
+        $instruction->delete();
+
+        return response()->noContent();
     }
 }
