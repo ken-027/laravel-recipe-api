@@ -23,7 +23,7 @@ class InstructionController extends Controller
     {
         $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
-        return InstructionResource::collection($instruction->latest('step_number')->where('recipe_id', $recipe_id)->get());
+        return InstructionResource::collection($instruction->latest('step_number')->where('recipe_id', $recipe->id)->get());
     }
 
     /**
@@ -46,7 +46,7 @@ class InstructionController extends Controller
      */
     public function show(Instruction $instruction, $recipe_id, $id)
     {
-        $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
         return new InstructionResource($instruction->find($id) ?? abort(422, "Instruction $id not found!"));
     }
 
@@ -55,7 +55,7 @@ class InstructionController extends Controller
      */
     public function update(UpdateInstructionRequest $request, Instruction $instruction, $recipe_id, $id): InstructionResource
     {
-        $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
         $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
 
@@ -70,7 +70,7 @@ class InstructionController extends Controller
      */
     public function destroy(Instruction $instruction, $recipe_id, $id)
     {
-        $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
         $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
 

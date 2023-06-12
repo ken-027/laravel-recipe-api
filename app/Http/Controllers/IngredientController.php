@@ -12,12 +12,18 @@ use Illuminate\Support\Facades\Gate;
 
 class IngredientController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:api')->except(['index', 'show']);
+    }
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Ingredient $ingredient, $recipe_id)
     {
-        //
+        $recipe = Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
+        return IngredientResource::collection($ingredient->where('recipe_id', $recipe->id)->get());
     }
 
     /**
@@ -38,9 +44,10 @@ class IngredientController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Ingredient $ingredient)
+    public function show(Ingredient $ingredient, $recipe_id, $id): IngredientResource
     {
-        //
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+        return new IngredientResource($ingredient->find($id) ?? abort(422, "Ingredients $id not found!"));
     }
 
     /**
