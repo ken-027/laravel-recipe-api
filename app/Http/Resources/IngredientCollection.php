@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class InstructionCollection extends ResourceCollection
+class IngredientCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -17,7 +17,7 @@ class InstructionCollection extends ResourceCollection
         $recipe = new RecipeResource($this['recipe']);
         $recipe = $recipe->toArray($request);
 
-        unset($recipe['ingredients']);
+        unset($recipe['instructions']);
 
         return $recipe;
     }

@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Ingredient;
 use App\Models\Instruction;
 use App\Models\Recipe;
 use App\Models\SaveRecipe;
+use App\Policies\IngredientPolicy;
 use App\Policies\InstructionPolicy;
 use App\Policies\RecipePolicy;
 use App\Policies\SaveRecipePolicy;
@@ -22,7 +24,8 @@ class AuthServiceProvider extends ServiceProvider
             // 'App\Models\Model' => 'App\Policies\ModelPolicy',
         Recipe::class => RecipePolicy::class,
         SaveRecipe::class => SaveRecipePolicy::class,
-        Instruction::class => InstructionPolicy::class
+        Instruction::class => InstructionPolicy::class,
+        Ingredient::class => IngredientPolicy::class
     ];
 
     /**

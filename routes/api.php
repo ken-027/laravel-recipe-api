@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\InstructionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProfileRecipeController;
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1')->as('v1.')->group(function () {
     Route::apiResource('recipes', RecipeController::class)->parameter('recipes', 'id')->whereUuid('id');
     Route::apiResource('recipes/{recipe_id}/instructions', InstructionController::class)->parameters(['instructions' => 'id']);
+    Route::apiResource('recipes/{recipe_id}/ingredients', IngredientController::class)->parameters(['ingredients' => 'id']);
 
     Route::prefix('profile')->as('profile.')->group(function () {
         Route::controller(ProfileRecipeController::class)->group(function () {

@@ -11,25 +11,25 @@ class RecipePolicy
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user): bool
-    {
-        //
-    }
+    // public function viewAny(User $user): bool
+    // {
+    //     //
+    // }
 
     /**
      * Determine whether the user can view the model.
      */
-    public function view(User $user, Recipe $recipe): bool
-    {
-        //
-    }
+    // public function view(User $user, Recipe $recipe): bool
+    // {
+    //     //
+    // }
 
     /**
      * Determine whether the user can create models.
      */
-    public function create(User $user): bool
+    public function create(User $user, Recipe $recipe): Response
     {
-        //
+        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can modify this recipe");
     }
 
     /**
@@ -51,16 +51,16 @@ class RecipePolicy
     /**
      * Determine whether the user can restore the model.
      */
-    public function restore(User $user, Recipe $recipe): bool
-    {
-        //
-    }
+    // public function restore(User $user, Recipe $recipe): bool
+    // {
+    //     //
+    // }
 
     /**
      * Determine whether the user can permanently delete the model.
      */
-    public function forceDelete(User $user, Recipe $recipe): bool
-    {
-        //
-    }
+    // public function forceDelete(User $user, Recipe $recipe): bool
+    // {
+    //     //
+    // }
 }

@@ -37,6 +37,7 @@ class InstructionController extends Controller
 
         if (!Instruction::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated)
             abort(422, 'already created this step!');
+
         return new RecipeResource($recipe);
     }
 
@@ -58,7 +59,7 @@ class InstructionController extends Controller
 
         $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
 
-        Gate::authorize('update', $recipe);
+        Gate::authorize('update', $instruction);
 
         $instruction->update($request->validated());
         return new InstructionResource($instruction);
