@@ -22,6 +22,7 @@ Route::prefix('v1')->as('v1.')->group(function () {
     Route::prefix('profile')->as('profile.')->group(function () {
         Route::controller(ProfileRecipeController::class)->group(function () {
             Route::patch('/recipes/{id}', 'store')->name('save.recipe');
+            Route::delete('/recipes/{id}', 'destroy')->name('delete.recipe');
             Route::get('/recipes/saved', 'saved_recipes')->name('saved.recipes');
             Route::get('/recipes', 'index')->name('my.recipes');
         });

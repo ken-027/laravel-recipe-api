@@ -8,6 +8,7 @@ use App\Http\Resources\RecipeResource;
 use App\Models\Recipe;
 use App\Models\SaveRecipe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class ProfileRecipeController extends Controller
 {
@@ -38,5 +39,16 @@ class ProfileRecipeController extends Controller
     public function index(Recipe $recipe): RecipeCollection
     {
         return new RecipeCollection($recipe->latest()->where('user_id', auth()->id())->get());
+    }
+
+    public function destroy(SaveRecipe $save_recipe, $id)
+    {
+        $save_recipe = $save_recipe->where('recipe_id', $id)->first() ?? abort(422, "$id not found!");
+
+        Gate::authorize('delete', $save_recipe);
+
+        $save_recipe->delete();
+
+        return response()->noContent();
     }
 }
