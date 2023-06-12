@@ -53,11 +53,11 @@ class InstructionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateInstructionRequest $request, Instruction $instruction, $recipe_id, $id): InstructionResource
+    public function update(UpdateInstructionRequest $request, $recipe_id, $id): InstructionResource
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
-        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found!");
+        $instruction = Instruction::find($id) ?? abort(422, "Instruction $id not found!");
 
         Gate::authorize('update', $instruction);
 

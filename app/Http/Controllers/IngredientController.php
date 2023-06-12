@@ -53,9 +53,16 @@ class IngredientController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateIngredientRequest $request, Ingredient $ingredient)
+    public function update(UpdateIngredientRequest $request, $recipe_id, $id): IngredientResource
     {
-        //
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
+        $ingredient = Ingredient::find($id) ?? abort(422, "Ingredient $id not found!");
+
+        Gate::authorize('update', $ingredient);
+
+        $ingredient->update($request->validated());
+        return new IngredientResource($ingredient);
     }
 
     /**
