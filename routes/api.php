@@ -19,8 +19,9 @@ Route::prefix('v1')->as('v1.')->group(function () {
     Route::apiResource('recipes', RecipeController::class)->parameter('recipes', 'id')->whereUuid('id');
 
     Route::prefix('profile')->as('profile.')->controller(ProfileRecipeController::class)->group(function () {
-        Route::patch('/recipes/{id}', 'store')->name('recipe.save');
-        Route::get('/recipes', 'index')->name('recipes');
+        Route::patch('/recipes/{id}', 'store')->name('save.recipe');
+        Route::get('/recipes/saved', 'saved_recipes')->name('saved.recipes');
+        Route::get('/recipes', 'index')->name('my.recipes');
     });
 
     Route::prefix('auth')->as('auth.')->group(function () {

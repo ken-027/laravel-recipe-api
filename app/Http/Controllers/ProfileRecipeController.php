@@ -26,12 +26,17 @@ class ProfileRecipeController extends Controller
         return new RecipeResource($recipe);
     }
 
-    public function index(Recipe $recipe): RecipeCollection
+    public function saved_recipes(Recipe $recipe): RecipeCollection
     {
         $user = auth()->user();
         $array_recipe_id = array_map(fn($value) => $value['recipe_id'], $user->save_recipes->toArray());
         return new RecipeCollection(
-            $recipe->all()->whereIn('id', [...$array_recipe_id])
+            $recipe->latest()->whereIn('id', [...$array_recipe_id])->get()
         );
+    }
+
+    public function index(Recipe $recipe): RecipeCollection
+    {
+        return new RecipeCollection($recipe->latest()->where('user_id', auth()->id())->get());
     }
 }
