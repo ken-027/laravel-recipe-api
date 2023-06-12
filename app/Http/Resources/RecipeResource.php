@@ -28,6 +28,7 @@ class RecipeResource extends JsonResource
             'tags' => $this->tags(),
             'author' => $this->user->name,
             'image' => config('app.url') . Storage::url($this->image),
+            'created_at' => $this->created_at->format('Y-m-d h:i:s a')
         ];
     }
 }
