@@ -57,7 +57,7 @@ class InstructionController extends Controller
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
-        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
+        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found!");
 
         Gate::authorize('update', $instruction);
 
@@ -72,7 +72,7 @@ class InstructionController extends Controller
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
 
-        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found on recipe $recipe_id");
+        $instruction = $instruction->find($id) ?? abort(422, "Instruction $id not found!");
 
         Gate::authorize('delete', $instruction);
 

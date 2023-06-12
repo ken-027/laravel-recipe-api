@@ -61,8 +61,16 @@ class IngredientController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Ingredient $ingredient)
+    public function destroy(Ingredient $ingredient, $recipe_id, $id)
     {
-        //
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
+        $instruction = $ingredient->find($id) ?? abort(422, "Ingredient $id not found!");
+
+        Gate::authorize('delete', $instruction);
+
+        $instruction->delete();
+
+        return response()->noContent();
     }
 }
