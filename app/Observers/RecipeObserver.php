@@ -17,15 +17,17 @@ class RecipeObserver
 
     public function saving(Recipe $recipe): void
     {
-        $recipe->tags = json_encode(
-            array_map(fn($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
-        );
+        // $recipe->tags = json_encode(
+        //     array_map(fn($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
+        // );
     }
 
     public function saved(Recipe $recipe): void
     {
-        $recipe->image = request()->file('image')->store("public/images/$recipe->id");
+        $recipe->image = $recipe->image->store("public/images/$recipe->id");
         $recipe->saveQuietly();
+        // $recipe->tags = $recipe->tags();
+        $recipe->image = config('app.url') . Storage::url($recipe->image);
     }
 
     /**
@@ -33,8 +35,8 @@ class RecipeObserver
      */
     public function created(Recipe $recipe): void
     {
-        $recipe->ingredients()->createMany(request()->get('ingredients'));
-        $recipe->instructions()->createMany(request()->get('instructions'));
+        // $recipe->ingredients()->createMany(request()->get('ingredients'));
+        // $recipe->instructions()->createMany(request()->get('instructions'));
     }
 
     /**
@@ -71,6 +73,7 @@ class RecipeObserver
 
     public function retrieved(Recipe $recipe): void
     {
-        // $recipe->image = config('app.url') . Storage::url($recipe->image);
+        $recipe->image = config('app.url') . Storage::url($recipe->image);
+        // $recipe->tags = $recipe->tags();
     }
 }

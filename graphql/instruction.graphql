@@ -1,7 +1,28 @@
+extend type Query {
+  instructions: [Instruction] @paginate(defaultCount: 10)
+}
+
+extend type Mutation {
+  addInstruction(
+    recipe_id: String!
+    step_number: Int!
+    description: String!
+  ): Instruction! @create
+}
+
 type Instruction {
   id: ID!
+  recipe_id: String!
   step_number: Int!
   description: String
   created_at: DateTime!
   updated_at: DateTime!
+  recipe: Recipe @belongsTo
+  full: String
+}
+
+
+input InstructionInput {
+  step_number: Int
+  description: String
 }

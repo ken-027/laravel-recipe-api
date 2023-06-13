@@ -172,6 +172,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\TelescopeServiceProvider::class,
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        \Nuwave\Lighthouse\Scout\ScoutServiceProvider::class,
     ])->toArray(),
 
     /*

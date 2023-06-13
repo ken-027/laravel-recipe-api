@@ -5,4 +5,11 @@ type Ingredient {
   unit: String!
   created_at: DateTime!
   updated_at: DateTime!
+  full: String
+}
+
+input IngredientInput {
+    name: String!
+    quantity: Int!
+    unit: String!
 }

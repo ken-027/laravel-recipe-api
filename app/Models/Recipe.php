@@ -26,6 +26,8 @@ class Recipe extends Model
         'user_id',
     ];
 
+    protected $appends = ['string_tags'];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -41,11 +43,11 @@ class Recipe extends Model
         return $this->hasMany(Instruction::class)->orderBy('step_number');
     }
 
-    public function tags(): array
+    public function getStringTagsAttribute(): array
     {
         return array_map(
             fn ($value) => $value['name'],
-            Tag::select('name')->whereIn('id', json_decode($this->tags))->get()->toArray()
+            Tag::select('name')->whereIn('id', json_decode((string)$this->tags))->get()->toArray()
         );
     }
 
