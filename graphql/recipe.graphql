@@ -1,0 +1,21 @@
+extend
+type Query {
+  recipe(id: ID @eq): Recipe @find
+  recipes: [Recipe] @paginate(defaultCount: 10)
+}
+
+type Recipe {
+  id: ID!
+  name: String!
+  description: String!
+  image: String
+  tags: String
+  servings: Int!
+  preparation_time: Int!
+  cooking_time: Int!
+  total_time: Int!
+  user: User! @belongsTo
+  created_at: DateTime!
+  instructions: [Instruction]! @hasMany
+  ingredients: [Ingredient]! @hasMany
+}

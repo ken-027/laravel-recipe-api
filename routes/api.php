@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('v1')->as('v1.')->group(function () {
-    Route::apiResource('recipes', RecipeController::class)->parameter('recipes', 'id')->whereUuid('id');
+// Route::prefix('v1')->as('v1.')->group(function () {
+//     Route::apiResource('recipes', RecipeController::class)->parameter('recipes', 'id')->whereUuid('id');
 
-    Route::prefix('auth')->as('auth.')->group(function () {
-        require __DIR__.'/auth.php';
-    });
-});
+//     Route::prefix('auth')->as('auth.')->group(function () {
+//         require __DIR__.'/auth.php';
+//     });
+// });

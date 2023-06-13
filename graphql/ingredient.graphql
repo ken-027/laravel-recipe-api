@@ -1,0 +1,8 @@
+type Ingredient {
+  id: ID!
+  name: String!
+  quantity: Int!
+  unit: String!
+  created_at: DateTime!
+  updated_at: DateTime!
+}
