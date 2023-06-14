@@ -3,6 +3,8 @@ extend type Mutation {
     email: String! @rules(apply: ["email"])
     password: String! @rules(apply: ["min:8", "max:16"])
   ): AuthResponse!
+  logout: String @guard
+  register(input: RegisterInput! @spread): AuthResponse
 }
 
 type AuthResponse {
@@ -18,4 +20,11 @@ type User {
   email_verified_at: DateTime
   created_at: DateTime!
   updated_at: DateTime!
+}
+
+input RegisterInput {
+    name: String!
+    email: String! @rules(apply: ["unique:users,email"])
+    password: String! @rules(apply: ["max:16", "min:8", "confirmed"])
+    password_confirmation: String
 }
