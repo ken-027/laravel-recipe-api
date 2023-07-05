@@ -1,0 +1,2908 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/recipes
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      search:
+        name: search
+        description: ''
+        required: false
+        example: est
+        type: string
+        custom: []
+      per_page:
+        name: per_page
+        description: ''
+        required: false
+        example: 2788007.0
+        type: number
+        custom: []
+      page:
+        name: page
+        description: ''
+        required: false
+        example: 6941398.49987
+        type: number
+        custom: []
+      tags:
+        name: tags
+        description: ''
+        required: false
+        example: magni
+        type: string
+        custom: []
+    cleanBodyParameters:
+      search: est
+      per_page: 2788007.0
+      page: 6941398.49987
+      tags: magni
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[],"meta":{"current_page":1,"from":null,"last_page":1,"path":"http:\/\/localhost:8000\/api\/v1\/recipes","per_page":2788007,"to":null,"total":0},"developer":{"name":"ken","email":"api.portfolio.ken027@gmail.com"}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/recipes
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: non
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Voluptates et eos dolores sint magni sed.'
+        type: string
+        custom: []
+      image:
+        name: image
+        description: 'Must be an image.'
+        required: true
+        example: null
+        type: file
+        custom: []
+      servings:
+        name: servings
+        description: ''
+        required: true
+        example: 0.172252
+        type: number
+        custom: []
+      preparation_time:
+        name: preparation_time
+        description: ''
+        required: true
+        example: 65507152.12
+        type: number
+        custom: []
+      cooking_time:
+        name: cooking_time
+        description: ''
+        required: true
+        example: 6185.91
+        type: number
+        custom: []
+      total_time:
+        name: total_time
+        description: ''
+        required: true
+        example: 0.60816
+        type: number
+        custom: []
+      ingredients:
+        name: ingredients
+        description: ''
+        required: true
+        example:
+          - animi
+        type: 'string[]'
+        custom: []
+      instructions:
+        name: instructions
+        description: ''
+        required: true
+        example:
+          - totam
+        type: 'number[]'
+        custom: []
+      tags:
+        name: tags
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+      'ingredients[].name':
+        name: 'ingredients[].name'
+        description: ''
+        required: false
+        example: enim
+        type: string
+        custom: []
+      'ingredients[].quantity':
+        name: 'ingredients[].quantity'
+        description: ''
+        required: false
+        example: 145526.0
+        type: number
+        custom: []
+      'ingredients[].unit':
+        name: 'ingredients[].unit'
+        description: ''
+        required: false
+        example: iusto
+        type: string
+        custom: []
+      'instructions[].step_number':
+        name: 'instructions[].step_number'
+        description: ''
+        required: true
+        example: 14965.483637422
+        type: number
+        custom: []
+      'instructions[].description':
+        name: 'instructions[].description'
+        description: ''
+        required: true
+        example: 'Vel ducimus qui aut.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: non
+      description: 'Voluptates et eos dolores sint magni sed.'
+      servings: 0.172252
+      preparation_time: 65507152.12
+      cooking_time: 6185.91
+      total_time: 0.60816
+      ingredients:
+        - animi
+      instructions:
+        - totam
+      tags: []
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/recipes/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":"99622892-fd2f-4f41-a959-08fa1c9200da","name":"Recipe kena","description":"another description","servings":1,"preparation_time":10,"cooking_time":10,"total_time":10,"ingredients":["2 pc onion","2 pc garlic"],"instructions":["1 first step","2 second step","32 put some jelly belly","32 put some jelly belly"],"tags":["breakfast","dinner","buffet"],"author":"Kenssa","image":"http:\/\/localhost:8000\/storage\/images\/99622892-fd2f-4f41-a959-08fa1c9200da\/ebBNSvmRj5B5ylHEu3QczhQ9K02gmi1fZEIs2WoR.jpg","created_at":"2023-06-11 07:31:05 am"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/recipes/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: harum
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Hic consequatur id doloribus numquam unde nihil aperiam.'
+        type: string
+        custom: []
+      image:
+        name: image
+        description: 'Must be an image.'
+        required: true
+        example: null
+        type: file
+        custom: []
+      servings:
+        name: servings
+        description: ''
+        required: true
+        example: 4171220.0
+        type: number
+        custom: []
+      preparation_time:
+        name: preparation_time
+        description: ''
+        required: true
+        example: 144703.893544
+        type: number
+        custom: []
+      cooking_time:
+        name: cooking_time
+        description: ''
+        required: true
+        example: 29366573.4
+        type: number
+        custom: []
+      total_time:
+        name: total_time
+        description: ''
+        required: true
+        example: 2.82
+        type: number
+        custom: []
+      tags:
+        name: tags
+        description: ''
+        required: true
+        example: []
+        type: object
+        custom: []
+    cleanBodyParameters:
+      name: harum
+      description: 'Hic consequatur id doloribus numquam unde nihil aperiam.'
+      servings: 4171220.0
+      preparation_time: 144703.893544
+      cooking_time: 29366573.4
+      total_time: 2.82
+      tags: []
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/recipes/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/recipes/{recipe_id}/instructions'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":"9965b066-e59d-495d-918e-99141a52e976","step_number":32,"description":"put some jelly belly","created_at":"2023-06-13 01:38:22 am"},{"id":"9965b099-ca9d-47ab-acd9-91abe475e703","step_number":32,"description":"put some jelly belly","created_at":"2023-06-13 01:38:56 am"},{"id":"99622893-0846-4abf-b8fa-5753ec0edf10","step_number":2,"description":"second step","created_at":"2023-06-11 07:31:05 am"},{"id":"99622893-0c74-4939-b181-6e17954e11a5","step_number":1,"description":"first step","created_at":"2023-06-11 07:31:05 am"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/recipes/{recipe_id}/instructions'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      step_number:
+        name: step_number
+        description: ''
+        required: true
+        example: 1.401818
+        type: number
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Nobis veritatis qui fugit vitae incidunt voluptatem.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      step_number: 1.401818
+      description: 'Nobis veritatis qui fugit vitae incidunt voluptatem.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/recipes/{recipe_id}/instructions/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the instruction.'
+        required: true
+        example: 9962276b-051c-4600-b4ed-bdd7de70aa66
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276b-051c-4600-b4ed-bdd7de70aa66
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":"9962276b-051c-4600-b4ed-bdd7de70aa66","step_number":2,"description":"second step","created_at":"2023-06-11 07:27:51 am"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/recipes/{recipe_id}/instructions/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the instruction.'
+        required: true
+        example: 9962276b-051c-4600-b4ed-bdd7de70aa66
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276b-051c-4600-b4ed-bdd7de70aa66
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      step_number:
+        name: step_number
+        description: ''
+        required: true
+        example: 33430.832961306
+        type: number
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Asperiores sapiente qui rerum inventore ut.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      step_number: 33430.832961306
+      description: 'Asperiores sapiente qui rerum inventore ut.'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/recipes/{recipe_id}/instructions/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the instruction.'
+        required: true
+        example: 9962276b-051c-4600-b4ed-bdd7de70aa66
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276b-051c-4600-b4ed-bdd7de70aa66
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/recipes/{recipe_id}/ingredients'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":"99622893-0239-4bf8-8b09-aca90f78d3d3","quantity":2,"unit":"pc","name":"onion","created_at":"2023-06-11 07:31:05 am"},{"id":"99622893-05a0-4519-8272-dd543938756b","quantity":2,"unit":"pc","name":"garlic","created_at":"2023-06-11 07:31:05 am"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '55'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/recipes/{recipe_id}/ingredients'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Store a newly created resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: mollitia
+        type: string
+        custom: []
+      quantity:
+        name: quantity
+        description: ''
+        required: true
+        example: 333.0558172
+        type: number
+        custom: []
+      unit:
+        name: unit
+        description: ''
+        required: true
+        example: quia
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: mollitia
+      quantity: 333.0558172
+      unit: quia
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/recipes/{recipe_id}/ingredients/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display the specified resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the ingredient.'
+        required: true
+        example: 9962276a-fe1e-447d-854f-069bdef290e8
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276a-fe1e-447d-854f-069bdef290e8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":"9962276a-fe1e-447d-854f-069bdef290e8","quantity":2,"unit":"pc","name":"onion","created_at":"2023-06-11 07:27:51 am"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '54'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/recipes/{recipe_id}/ingredients/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update the specified resource in storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the ingredient.'
+        required: true
+        example: 9962276a-fe1e-447d-854f-069bdef290e8
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276a-fe1e-447d-854f-069bdef290e8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        custom: []
+      quantity:
+        name: quantity
+        description: ''
+        required: true
+        example: 2279.938541
+        type: number
+        custom: []
+      unit:
+        name: unit
+        description: ''
+        required: true
+        example: ratione
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: quaerat
+      quantity: 2279.938541
+      unit: ratione
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/recipes/{recipe_id}/ingredients/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      recipe_id:
+        name: recipe_id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the ingredient.'
+        required: true
+        example: 9962276a-fe1e-447d-854f-069bdef290e8
+        type: string
+        custom: []
+    cleanUrlParameters:
+      recipe_id: 99622892-fd2f-4f41-a959-08fa1c9200da
+      id: 9962276a-fe1e-447d-854f-069bdef290e8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/profile/recipes/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/profile/recipes/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the recipe.'
+        required: true
+        example: 99622892-fd2f-4f41-a959-08fa1c9200da
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: 99622892-fd2f-4f41-a959-08fa1c9200da
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/profile/recipes/saved
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/profile/recipes
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/profile/info
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Register new user'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: vdyvpxlypmucsrpukxsjcoi
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: margarette63@example.org
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+        required: true
+        example: '^O@vA"t!2/WFU{i~//W>'
+        type: string
+        custom: []
+      password_confirmation:
+        name: password_confirmation
+        description: 'Must be at least 8 characters. Must not be greater than 16 characters and match with the password.'
+        required: true
+        example: repudiandae
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: vdyvpxlypmucsrpukxsjcoi
+      email: margarette63@example.org
+      password: '^O@vA"t!2/WFU{i~//W>'
+      password_confirmation: repudiandae
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "access_token": "token",
+           "token_type": "bearer",
+           "expires_in": "seconds"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: stehr.robyn@example.org
+        type: string
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
+        required: true
+        example: '.&E$XFjtv'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: stehr.robyn@example.org
+      password: '.&E$XFjtv'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/v1/auth/logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Remove the specified resource from storage.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/info
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/refresh-token
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/redirect/google
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 302
+        content: |-
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="UTF-8" />
+                  <meta http-equiv="refresh" content="0;url='https://accounts.google.com/o/oauth2/auth?client_id=1018560111374-9tun7hfnn2ffi50m83oimlso5vr86bup.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgoogle&amp;scope=openid+profile+email&amp;response_type=code'" />
+
+                  <title>Redirecting to https://accounts.google.com/o/oauth2/auth?client_id=1018560111374-9tun7hfnn2ffi50m83oimlso5vr86bup.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgoogle&amp;scope=openid+profile+email&amp;response_type=code</title>
+              </head>
+              <body>
+                  Redirecting to <a href="https://accounts.google.com/o/oauth2/auth?client_id=1018560111374-9tun7hfnn2ffi50m83oimlso5vr86bup.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgoogle&amp;scope=openid+profile+email&amp;response_type=code">https://accounts.google.com/o/oauth2/auth?client_id=1018560111374-9tun7hfnn2ffi50m83oimlso5vr86bup.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgoogle&amp;scope=openid+profile+email&amp;response_type=code</a>.
+              </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          location: 'https://accounts.google.com/o/oauth2/auth?client_id=1018560111374-9tun7hfnn2ffi50m83oimlso5vr86bup.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgoogle&scope=openid+profile+email&response_type=code'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '53'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/callback/google
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Client error: `POST https://www.googleapis.com/oauth2/v4/token` resulted in a `400 Bad Request` response:\n{\n  \"error\": \"invalid_request\",\n  \"error_description\": \"Missing required parameter: code\"\n}\n",
+              "exception": "GuzzleHttp\\Exception\\ClientException",
+              "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php",
+              "line": 113,
+              "trace": [
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php",
+                      "line": 72,
+                      "function": "create",
+                      "class": "GuzzleHttp\\Exception\\RequestException",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 209,
+                      "function": "GuzzleHttp\\{closure}",
+                      "class": "GuzzleHttp\\Middleware",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 158,
+                      "function": "callHandler",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php",
+                      "line": 52,
+                      "function": "GuzzleHttp\\Promise\\{closure}",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 251,
+                      "function": "run",
+                      "class": "GuzzleHttp\\Promise\\TaskQueue",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 227,
+                      "function": "invokeWaitFn",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 272,
+                      "function": "waitIfPending",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 229,
+                      "function": "invokeWaitList",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 69,
+                      "function": "waitIfPending",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Client.php",
+                      "line": 189,
+                      "function": "wait",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\ClientTrait.php",
+                      "line": 95,
+                      "function": "request",
+                      "class": "GuzzleHttp\\Client",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\socialite\\src\\Two\\AbstractProvider.php",
+                      "line": 291,
+                      "function": "post",
+                      "class": "GuzzleHttp\\Client",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\socialite\\src\\Two\\AbstractProvider.php",
+                      "line": 240,
+                      "function": "getAccessTokenResponse",
+                      "class": "Laravel\\Socialite\\Two\\AbstractProvider",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\app\\Http\\Controllers\\OAuthController.php",
+                      "line": 25,
+                      "function": "user",
+                      "class": "Laravel\\Socialite\\Two\\AbstractProvider",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                      "line": 54,
+                      "function": "google_callback",
+                      "class": "App\\Http\\Controllers\\OAuthController",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                      "line": 43,
+                      "function": "callAction",
+                      "class": "Illuminate\\Routing\\Controller",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                      "line": 260,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\ControllerDispatcher",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                      "line": 205,
+                      "function": "runController",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 799,
+                      "function": "run",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 152,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 128,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 80,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php",
+                      "line": 25,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php",
+                      "line": 26,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 800,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 777,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 741,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 730,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 92,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 209,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 166,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 124,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 71,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 49,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+                      "line": 51,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 208,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Command\\Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 178,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 1081,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 320,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 174,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 200,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/redirect/github
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 302
+        content: |-
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <meta charset="UTF-8" />
+                  <meta http-equiv="refresh" content="0;url='https://github.com/login/oauth/authorize?client_id=368a0797bf61ab5a552f&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgithub&amp;scope=user%3Aemail&amp;response_type=code'" />
+
+                  <title>Redirecting to https://github.com/login/oauth/authorize?client_id=368a0797bf61ab5a552f&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgithub&amp;scope=user%3Aemail&amp;response_type=code</title>
+              </head>
+              <body>
+                  Redirecting to <a href="https://github.com/login/oauth/authorize?client_id=368a0797bf61ab5a552f&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgithub&amp;scope=user%3Aemail&amp;response_type=code">https://github.com/login/oauth/authorize?client_id=368a0797bf61ab5a552f&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgithub&amp;scope=user%3Aemail&amp;response_type=code</a>.
+              </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          location: 'https://github.com/login/oauth/authorize?client_id=368a0797bf61ab5a552f&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fcallback%2Fgithub&scope=user%3Aemail&response_type=code'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '51'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/auth/callback/github
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Client error: `GET https://api.github.com/user` resulted in a `401 Unauthorized` response:\n{\"message\":\"Bad credentials\",\"documentation_url\":\"https://docs.github.com/rest\"}\n",
+              "exception": "GuzzleHttp\\Exception\\ClientException",
+              "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Exception\\RequestException.php",
+              "line": 113,
+              "trace": [
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Middleware.php",
+                      "line": 72,
+                      "function": "create",
+                      "class": "GuzzleHttp\\Exception\\RequestException",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 209,
+                      "function": "GuzzleHttp\\{closure}",
+                      "class": "GuzzleHttp\\Middleware",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 158,
+                      "function": "callHandler",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\TaskQueue.php",
+                      "line": 52,
+                      "function": "GuzzleHttp\\Promise\\{closure}",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 251,
+                      "function": "run",
+                      "class": "GuzzleHttp\\Promise\\TaskQueue",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 227,
+                      "function": "invokeWaitFn",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 272,
+                      "function": "waitIfPending",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 229,
+                      "function": "invokeWaitList",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\promises\\src\\Promise.php",
+                      "line": 69,
+                      "function": "waitIfPending",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\Client.php",
+                      "line": 189,
+                      "function": "wait",
+                      "class": "GuzzleHttp\\Promise\\Promise",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\guzzlehttp\\guzzle\\src\\ClientTrait.php",
+                      "line": 44,
+                      "function": "request",
+                      "class": "GuzzleHttp\\Client",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\socialite\\src\\Two\\GithubProvider.php",
+                      "line": 42,
+                      "function": "get",
+                      "class": "GuzzleHttp\\Client",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\socialite\\src\\Two\\AbstractProvider.php",
+                      "line": 243,
+                      "function": "getUserByToken",
+                      "class": "Laravel\\Socialite\\Two\\GithubProvider",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\app\\Http\\Controllers\\OAuthController.php",
+                      "line": 39,
+                      "function": "user",
+                      "class": "Laravel\\Socialite\\Two\\AbstractProvider",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+                      "line": 54,
+                      "function": "github_callback",
+                      "class": "App\\Http\\Controllers\\OAuthController",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+                      "line": 43,
+                      "function": "callAction",
+                      "class": "Illuminate\\Routing\\Controller",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                      "line": 260,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\ControllerDispatcher",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+                      "line": 205,
+                      "function": "runController",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 799,
+                      "function": "run",
+                      "class": "Illuminate\\Routing\\Route",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Routing\\{closure}",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+                      "line": 50,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 152,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 128,
+                      "function": "handleRequest",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+                      "line": 80,
+                      "function": "handleRequestUsingNamedLimiter",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php",
+                      "line": 25,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Laravel\\Sanctum\\Http\\Middleware\\{closure}",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php",
+                      "line": 26,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 800,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 777,
+                      "function": "runRouteWithinStack",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 741,
+                      "function": "runRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+                      "line": 730,
+                      "function": "dispatchToRoute",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 200,
+                      "function": "dispatch",
+                      "class": "Illuminate\\Routing\\Router",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 141,
+                      "function": "Illuminate\\Foundation\\Http\\{closure}",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php",
+                      "line": 31,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+                      "line": 21,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php",
+                      "line": 40,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\TrimStrings",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+                      "line": 27,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+                      "line": 86,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php",
+                      "line": 62,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\HandleCors",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php",
+                      "line": 39,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 180,
+                      "function": "handle",
+                      "class": "Illuminate\\Http\\Middleware\\TrustProxies",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+                      "line": 116,
+                      "function": "Illuminate\\Pipeline\\{closure}",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 175,
+                      "function": "then",
+                      "class": "Illuminate\\Pipeline\\Pipeline",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+                      "line": 144,
+                      "function": "sendRequestThroughRouter",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 299,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Http\\Kernel",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 287,
+                      "function": "callLaravelOrLumenRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 92,
+                      "function": "makeApiCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 45,
+                      "function": "makeResponseCall",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+                      "line": 35,
+                      "function": "makeResponseCallIfConditionsPass",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 209,
+                      "function": "__invoke",
+                      "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 166,
+                      "function": "iterateThroughStrategies",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Extractor.php",
+                      "line": 95,
+                      "function": "fetchResponses",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 124,
+                      "function": "processRoute",
+                      "class": "Knuckles\\Scribe\\Extracting\\Extractor",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 71,
+                      "function": "extractEndpointsInfoFromLaravelApp",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\GroupedEndpoints\\GroupedEndpointsFromApp.php",
+                      "line": 49,
+                      "function": "extractEndpointsInfoAndWriteToDisk",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+                      "line": 51,
+                      "function": "get",
+                      "class": "Knuckles\\Scribe\\GroupedEndpoints\\GroupedEndpointsFromApp",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 36,
+                      "function": "handle",
+                      "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+                      "line": 41,
+                      "function": "Illuminate\\Container\\{closure}",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 93,
+                      "function": "unwrapIfClosure",
+                      "class": "Illuminate\\Container\\Util",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+                      "line": 37,
+                      "function": "callBoundMethod",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+                      "line": 662,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\BoundMethod",
+                      "type": "::"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 208,
+                      "function": "call",
+                      "class": "Illuminate\\Container\\Container",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Command\\Command.php",
+                      "line": 326,
+                      "function": "execute",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+                      "line": 178,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Command\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 1081,
+                      "function": "run",
+                      "class": "Illuminate\\Console\\Command",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 320,
+                      "function": "doRunCommand",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\symfony\\console\\Application.php",
+                      "line": 174,
+                      "function": "doRun",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+                      "line": 200,
+                      "function": "run",
+                      "class": "Symfony\\Component\\Console\\Application",
+                      "type": "->"
+                  },
+                  {
+                      "file": "D:\\files\\system development\\laravel\\recipe-api\\artisan",
+                      "line": 37,
+                      "function": "handle",
+                      "class": "Illuminate\\Foundation\\Console\\Kernel",
+                      "type": "->"
+                  }
+              ]
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming password reset link request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: nadia99@example.org
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: nadia99@example.org
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/reset-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Handle an incoming new password request.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: quis
+        type: string
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: dbreitenberg@example.org
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+    cleanBodyParameters:
+      token: quis
+      email: dbreitenberg@example.org
+      password: et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/auth/verify-email/{id}/{hash}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Mark the authenticated user's email address as verified."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the verify email.'
+        required: true
+        example: et
+        type: string
+        custom: []
+      hash:
+        name: hash
+        description: ''
+        required: true
+        example: debitis
+        type: string
+        custom: []
+    cleanUrlParameters:
+      id: et
+      hash: debitis
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: 'http://localhost:3000'
+          access-control-allow-credentials: 'true'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/auth/email/verification-notification
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a new email verification notification.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
