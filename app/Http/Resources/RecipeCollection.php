@@ -31,7 +31,7 @@ class RecipeCollection extends ResourceCollection
         return [
             'developer' => [
                 'name' => config('app.author'),
-                'email' => config('app.email')
+                'email' => config('app.email'),
             ],
         ];
     }

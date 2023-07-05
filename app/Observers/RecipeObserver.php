@@ -2,8 +2,6 @@
 
 namespace App\Observers;
 
-use App\Models\Ingredient;
-use App\Models\Instruction;
 use App\Models\Recipe;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;
@@ -18,7 +16,7 @@ class RecipeObserver
     public function saving(Recipe $recipe): void
     {
         $recipe->tags = json_encode(
-            array_map(fn($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
+            array_map(fn ($value) => Tag::firstOrCreate(['name' => $value])->id, request()->get('tags'))
         );
     }
 

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\UserResource;
-use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
@@ -11,6 +10,11 @@ class ProfileController extends Controller
     {
         $this->middleware('auth:api');
     }
+
+    /**
+     * Info of authenticated user
+     * @authenticated
+     */
     public function show(): UserResource
     {
         return new UserResource(auth()->user());

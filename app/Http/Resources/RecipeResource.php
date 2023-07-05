@@ -23,12 +23,12 @@ class RecipeResource extends JsonResource
             'preparation_time' => $this->preparation_time,
             'cooking_time' => $this->cooking_time,
             'total_time' => $this->total_time,
-            'ingredients' => array_map(fn($value) => $value['full'], $this->ingredients->toArray()),
-            'instructions' => array_map(fn($value) => $value['full'], $this->instructions->toArray()),
+            'ingredients' => array_map(fn ($value) => $value['full'], $this->ingredients->toArray()),
+            'instructions' => array_map(fn ($value) => $value['full'], $this->instructions->toArray()),
             'tags' => $this->tags(),
             'author' => $this->user->name,
-            'image' => config('app.url') . Storage::url($this->image),
-            'created_at' => $this->created_at->format('Y-m-d h:i:s a')
+            'image' => config('app.url').Storage::url($this->image),
+            'created_at' => $this->created_at->format('Y-m-d h:i:s a'),
         ];
     }
 }

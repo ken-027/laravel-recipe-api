@@ -16,8 +16,9 @@ class IngredientController extends Controller
     {
         $this->middleware('auth:api')->except(['index', 'show']);
     }
+
     /**
-     * Display a listing of the resource.
+     * Get all ingredients from specific recipe
      */
     public function index(Ingredient $ingredient, $recipe_id)
     {
@@ -27,7 +28,8 @@ class IngredientController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Add new ingredient from a specific recipe
+     * @authenticated
      */
     public function store(StoreIngredientRequest $request, $recipe_id): RecipeResource
     {
@@ -35,31 +37,43 @@ class IngredientController extends Controller
 
         Gate::authorize('create', $recipe);
 
-        if (!Ingredient::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated)
+        if (!Ingredient::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated) {
             abort(422, 'already created this ingredient!');
+        }
 
         return new RecipeResource($recipe);
     }
 
     /**
-     * Display the specified resource.
+     * Get specific ingredient from specific recipe
      */
     public function show(Ingredient $ingredient, $recipe_id, $id): IngredientResource
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
         return new IngredientResource($ingredient->find($id) ?? abort(422, "Ingredients $id not found!"));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update specific ingredient from specific recipe
+     * @authenticated
      */
-    public function update(UpdateIngredientRequest $request, Ingredient $ingredient)
+    public function update(UpdateIngredientRequest $request, $recipe_id, $id): IngredientResource
     {
-        //
+        Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
+        $ingredient = Ingredient::find($id) ?? abort(422, "Ingredient $id not found!");
+
+        Gate::authorize('update', $ingredient);
+
+        $ingredient->update($request->validated());
+
+        return new IngredientResource($ingredient);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove ingredients from it's recipe
+     * @authenticated
      */
     public function destroy(Ingredient $ingredient, $recipe_id, $id)
     {

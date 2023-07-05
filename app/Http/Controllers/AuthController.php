@@ -17,7 +17,15 @@ class AuthController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Register new user
+     *
+     * @bodyParam password_confirmation string required Must be at least 8 characters. Must not be greater than 16 characters and match with the password.
+     *
+     * @response {
+     *  "access_token": "token",
+     *  "token_type": "bearer",
+     *  "expires_in": "seconds"
+     * }
      */
     public function store(StoreUserRequest $request, User $user)
     {
@@ -28,6 +36,9 @@ class AuthController extends Controller
         return $this->respondWithToken((string) Auth::login($user))->setStatusCode(201);
     }
 
+    /**
+     * Login
+     */
     public function login(LoginRequest $request)
     {
         return $this->respondWithToken($request->authenticate());
@@ -39,7 +50,8 @@ class AuthController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Logout
+     * @authenticated
      */
     public function destroy()
     {
@@ -48,6 +60,10 @@ class AuthController extends Controller
         return response()->noContent();
     }
 
+    /**
+     * Get refresh access token
+     * @authenticated
+     */
     public function refresh()
     {
         return $this->respondWithToken(Auth::refresh());

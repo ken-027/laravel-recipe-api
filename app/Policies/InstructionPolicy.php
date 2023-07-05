@@ -29,7 +29,7 @@ class InstructionPolicy
      */
     public function create(User $user, Instruction $instruction): Response
     {
-        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can add this instruction");
+        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can add this instruction');
     }
 
     /**
@@ -37,7 +37,7 @@ class InstructionPolicy
      */
     public function update(User $user, Instruction $instruction): Response
     {
-        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can update this instruction");
+        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can update this instruction');
     }
 
     /**
@@ -45,7 +45,7 @@ class InstructionPolicy
      */
     public function delete(User $user, Instruction $instruction): Response
     {
-        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can delete this instruction");
+        return $user->id === $instruction->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can delete this instruction');
     }
 
     /**

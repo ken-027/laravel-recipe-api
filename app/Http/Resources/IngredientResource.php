@@ -19,7 +19,7 @@ class IngredientResource extends JsonResource
             'quantity' => $this->quantity,
             'unit' => $this->unit,
             'name' => $this->name,
-            'created_at' => $this->created_at->format('Y-m-d h:i:s a')
+            'created_at' => $this->created_at->format('Y-m-d h:i:s a'),
         ];
     }
 }
