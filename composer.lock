@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bac29785d6da3ec00f3a82c6da30277",
+    "content-hash": "7a89c6ac2f7d80c43b7ff9656b416faf",
     "packages": [
         {
             "name": "brick/math",
@@ -2637,16 +2637,16 @@
         },
         {
             "name": "mll-lab/laravel-graphiql",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mll-lab/laravel-graphiql.git",
-                "reference": "43eb17bf8d2297564b799cc4ed1f172cd331466f"
+                "reference": "54d7dbe5376ab87a6ea83be11b1431d0af9e2f6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mll-lab/laravel-graphiql/zipball/43eb17bf8d2297564b799cc4ed1f172cd331466f",
-                "reference": "43eb17bf8d2297564b799cc4ed1f172cd331466f",
+                "url": "https://api.github.com/repos/mll-lab/laravel-graphiql/zipball/54d7dbe5376ab87a6ea83be11b1431d0af9e2f6c",
+                "reference": "54d7dbe5376ab87a6ea83be11b1431d0af9e2f6c",
                 "shasum": ""
             },
             "require": {
@@ -2697,9 +2697,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mll-lab/laravel-graphiql/issues",
-                "source": "https://github.com/mll-lab/laravel-graphiql/tree/v3.0.0"
+                "source": "https://github.com/mll-lab/laravel-graphiql/tree/v3.1.0"
             },
-            "time": "2023-05-17T18:46:51+00:00"
+            "time": "2023-07-04T13:58:40+00:00"
         },
         {
             "name": "monolog/monolog",
