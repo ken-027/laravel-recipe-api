@@ -16,9 +16,8 @@ class IngredientController extends Controller
     {
         $this->middleware('auth:api')->except(['index', 'show']);
     }
-
     /**
-     * Get all ingredients from specific recipe
+     * Display a listing of the resource.
      */
     public function index(Ingredient $ingredient, $recipe_id)
     {
@@ -28,8 +27,7 @@ class IngredientController extends Controller
     }
 
     /**
-     * Add new ingredient from a specific recipe
-     * @authenticated
+     * Store a newly created resource in storage.
      */
     public function store(StoreIngredientRequest $request, $recipe_id): RecipeResource
     {
@@ -37,26 +35,23 @@ class IngredientController extends Controller
 
         Gate::authorize('create', $recipe);
 
-        if (!Ingredient::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated) {
+        if (!Ingredient::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated)
             abort(422, 'already created this ingredient!');
-        }
 
         return new RecipeResource($recipe);
     }
 
     /**
-     * Get specific ingredient from specific recipe
+     * Display the specified resource.
      */
     public function show(Ingredient $ingredient, $recipe_id, $id): IngredientResource
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
-
         return new IngredientResource($ingredient->find($id) ?? abort(422, "Ingredients $id not found!"));
     }
 
     /**
-     * Update specific ingredient from specific recipe
-     * @authenticated
+     * Update the specified resource in storage.
      */
     public function update(UpdateIngredientRequest $request, $recipe_id, $id): IngredientResource
     {
@@ -67,13 +62,11 @@ class IngredientController extends Controller
         Gate::authorize('update', $ingredient);
 
         $ingredient->update($request->validated());
-
         return new IngredientResource($ingredient);
     }
 
     /**
-     * Remove ingredients from it's recipe
-     * @authenticated
+     * Remove the specified resource from storage.
      */
     public function destroy(Ingredient $ingredient, $recipe_id, $id)
     {
