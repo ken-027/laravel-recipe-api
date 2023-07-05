@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HealthCheckController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,5 @@ Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
 
-// require __DIR__.'/auth.php';
+
+Route::get('/health-check', HealthCheckController::class);

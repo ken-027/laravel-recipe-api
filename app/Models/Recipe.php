@@ -49,7 +49,7 @@ class Recipe extends Model
     public function tags(): array
     {
         return array_map(
-            fn($value) => $value['name'],
+            fn ($value) => $value['name'],
             Tag::select('name')->whereIn('id', json_decode($this->tags))->get()->toArray()
         );
     }

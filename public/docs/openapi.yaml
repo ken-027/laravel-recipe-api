@@ -9,8 +9,8 @@ servers:
 paths:
   /api/v1/recipes:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Get the list of recipes'
+      operationId: getTheListOfRecipes
       description: ''
       parameters: []
       responses:
@@ -27,7 +27,7 @@ paths:
                     from: null
                     last_page: 1
                     path: 'http://localhost:8000/api/v1/recipes'
-                    per_page: 2788007
+                    per_page: 199
                     to: null
                     total: 0
                   developer:
@@ -54,7 +54,7 @@ paths:
                         example: 'http://localhost:8000/api/v1/recipes'
                       per_page:
                         type: integer
-                        example: 2788007
+                        example: 199
                       to:
                         type: string
                         example: null
@@ -82,25 +82,32 @@ paths:
                 search:
                   type: string
                   description: ''
-                  example: est
+                  example: sed
                 per_page:
                   type: number
                   description: ''
-                  example: 2788007.0
+                  example: 199.957834
                 page:
                   type: number
                   description: ''
-                  example: 6941398.49987
+                  example: 4773064.1
                 tags:
                   type: string
                   description: ''
-                  example: magni
+                  example: quasi
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Create new recipe'
+      operationId: createNewRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -114,11 +121,11 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: non
+                  example: tempora
                 description:
                   type: string
                   description: ''
-                  example: 'Voluptates et eos dolores sint magni sed.'
+                  example: 'Et in distinctio ipsam omnis laudantium assumenda culpa qui.'
                 image:
                   type: string
                   format: binary
@@ -126,31 +133,31 @@ paths:
                 servings:
                   type: number
                   description: ''
-                  example: 0.172252
+                  example: 28778.334014783
                 preparation_time:
                   type: number
                   description: ''
-                  example: 65507152.12
+                  example: 22218786.579
                 cooking_time:
                   type: number
                   description: ''
-                  example: 6185.91
+                  example: 11.725497221
                 total_time:
                   type: number
                   description: ''
-                  example: 0.60816
+                  example: 2243593.0
                 ingredients:
                   type: array
                   description: ''
                   example:
-                    - animi
+                    - provident
                   items:
                     type: string
                 instructions:
                   type: array
                   description: ''
                   example:
-                    - totam
+                    - fugiat
                   items:
                     type: number
                 tags:
@@ -169,11 +176,10 @@ paths:
                 - ingredients
                 - instructions
                 - tags
-      security: []
   '/api/v1/recipes/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Display the specified recipe'
+      operationId: displayTheSpecifiedRecipe
       description: ''
       parameters: []
       responses:
@@ -265,10 +271,17 @@ paths:
         - Endpoints
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update specified recipe'
+      operationId: updateSpecifiedRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -282,11 +295,11 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: harum
+                  example: et
                 description:
                   type: string
                   description: ''
-                  example: 'Hic consequatur id doloribus numquam unde nihil aperiam.'
+                  example: 'Molestiae voluptatem non voluptas delectus omnis ad sunt esse.'
                 image:
                   type: string
                   format: binary
@@ -294,19 +307,19 @@ paths:
                 servings:
                   type: number
                   description: ''
-                  example: 4171220.0
+                  example: 0.0
                 preparation_time:
                   type: number
                   description: ''
-                  example: 144703.893544
+                  example: 99818704.6
                 cooking_time:
                   type: number
                   description: ''
-                  example: 29366573.4
+                  example: 0.0
                 total_time:
                   type: number
                   description: ''
-                  example: 2.82
+                  example: 47.30237
                 tags:
                   type: object
                   description: ''
@@ -321,16 +334,21 @@ paths:
                 - cooking_time
                 - total_time
                 - tags
-      security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Delete the specified recipe'
+      operationId: deleteTheSpecifiedRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -342,8 +360,8 @@ paths:
           type: string
   '/api/v1/recipes/{recipe_id}/instructions':
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Get all instruction of a specific recipe'
+      operationId: getAllInstructionOfASpecificRecipe
       description: ''
       parameters: []
       responses:
@@ -380,10 +398,17 @@ paths:
         - Endpoints
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Add new instruction of a recipe'
+      operationId: addNewInstructionOfARecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -397,15 +422,14 @@ paths:
                 step_number:
                   type: number
                   description: ''
-                  example: 1.401818
+                  example: 1247.0
                 description:
                   type: string
                   description: ''
-                  example: 'Nobis veritatis qui fugit vitae incidunt voluptatem.'
+                  example: 'Deleniti vel veritatis fugit architecto rerum.'
               required:
                 - step_number
                 - description
-      security: []
     parameters:
       -
         in: path
@@ -417,8 +441,8 @@ paths:
           type: string
   '/api/v1/recipes/{recipe_id}/instructions/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Get the specific instruction of a recipe'
+      operationId: getTheSpecificInstructionOfARecipe
       description: ''
       parameters: []
       responses:
@@ -450,10 +474,17 @@ paths:
         - Endpoints
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update specific instruction for a recipe'
+      operationId: updateSpecificInstructionForARecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -467,24 +498,29 @@ paths:
                 step_number:
                   type: number
                   description: ''
-                  example: 33430.832961306
+                  example: 1467684.0
                 description:
                   type: string
                   description: ''
-                  example: 'Asperiores sapiente qui rerum inventore ut.'
+                  example: 'Dolor officia rem nihil.'
               required:
                 - step_number
                 - description
-      security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Remove specific instruction for a recipe'
+      operationId: removeSpecificInstructionForARecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -504,8 +540,8 @@ paths:
           type: string
   '/api/v1/recipes/{recipe_id}/ingredients':
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Get all ingredients from specific recipe'
+      operationId: getAllIngredientsFromSpecificRecipe
       description: ''
       parameters: []
       responses:
@@ -534,10 +570,17 @@ paths:
         - Endpoints
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Add new ingredient from a specific recipe'
+      operationId: addNewIngredientFromASpecificRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -551,20 +594,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: labore
                 quantity:
                   type: number
                   description: ''
-                  example: 333.0558172
+                  example: 73089809.442639
                 unit:
                   type: string
                   description: ''
-                  example: quia
+                  example: a
               required:
                 - name
                 - quantity
                 - unit
-      security: []
     parameters:
       -
         in: path
@@ -576,8 +618,8 @@ paths:
           type: string
   '/api/v1/recipes/{recipe_id}/ingredients/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Get specific ingredient from specific recipe'
+      operationId: getSpecificIngredientFromSpecificRecipe
       description: ''
       parameters: []
       responses:
@@ -613,10 +655,17 @@ paths:
         - Endpoints
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update specific ingredient from specific recipe'
+      operationId: updateSpecificIngredientFromSpecificRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
@@ -630,29 +679,34 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: quaerat
+                  example: ut
                 quantity:
                   type: number
                   description: ''
-                  example: 2279.938541
+                  example: 6263774.0
                 unit:
                   type: string
                   description: ''
-                  example: ratione
+                  example: et
               required:
                 - name
                 - quantity
                 - unit
-      security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: "Remove ingredients from it's recipe"
+      operationId: removeIngredientsFromItsRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -672,23 +726,35 @@ paths:
           type: string
   '/api/v1/profile/recipes/{id}':
     patch:
-      summary: ''
-      operationId: patchApiV1ProfileRecipesId
+      summary: 'Save specific recipe'
+      operationId: saveSpecificRecipe
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
     delete:
-      summary: ''
-      operationId: deleteApiV1ProfileRecipesId
+      summary: 'Remove specific recipe from saved recipes'
+      operationId: removeSpecificRecipeFromSavedRecipes
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
     parameters:
       -
         in: path
@@ -700,10 +766,17 @@ paths:
           type: string
   /api/v1/profile/recipes/saved:
     get:
-      summary: ''
-      operationId: getApiV1ProfileRecipesSaved
+      summary: 'Get the saved recipes'
+      operationId: getTheSavedRecipes
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -719,13 +792,19 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
   /api/v1/profile/recipes:
     get:
-      summary: ''
-      operationId: getApiV1ProfileRecipes
+      summary: 'Get the recipe created'
+      operationId: getTheRecipeCreated
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -741,13 +820,19 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
   /api/v1/profile/info:
     get:
-      summary: ''
-      operationId: getApiV1ProfileInfo
+      summary: 'Info of authenticated user'
+      operationId: infoOfAuthenticatedUser
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -763,7 +848,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
   /api/v1/auth/register:
     post:
       summary: 'Register new user'
@@ -803,19 +887,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vdyvpxlypmucsrpukxsjcoi
+                  example: zujyzyforeeqt
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: margarette63@example.org
+                  example: queenie14@example.com
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: '^O@vA"t!2/WFU{i~//W>'
+                  example: nqa@%G\pb
                 password_confirmation:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters and match with the password.'
-                  example: repudiandae
+                  example: officia
               required:
                 - name
                 - email
@@ -824,8 +908,8 @@ paths:
       security: []
   /api/v1/auth/login:
     post:
-      summary: ''
-      operationId: postApiV1AuthLogin
+      summary: Login
+      operationId: login
       description: ''
       parameters: []
       responses: {  }
@@ -841,53 +925,44 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: stehr.robyn@example.org
+                  example: lhomenick@example.org
                 password:
                   type: string
                   description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
-                  example: '.&E$XFjtv'
+                  example: 'cQ1+,lmpizTY|ytP;'
               required:
                 - email
                 - password
       security: []
   /api/v1/auth/logout:
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: Logout
+      operationId: logout
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses: {  }
       tags:
         - Endpoints
-      security: []
-  /api/v1/auth/info:
-    get:
-      summary: ''
-      operationId: getApiV1AuthInfo
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
   /api/v1/auth/refresh-token:
     get:
-      summary: ''
-      operationId: getApiV1AuthRefreshToken
+      summary: 'Get refresh access token'
+      operationId: getRefreshAccessToken
       description: ''
-      parameters: []
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
       responses:
         401:
           description: ''
@@ -903,11 +978,10 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
   /api/v1/auth/redirect/google:
     get:
-      summary: ''
-      operationId: getApiV1AuthRedirectGoogle
+      summary: 'Redirect for a google authentication'
+      operationId: redirectForAGoogleAuthentication
       description: ''
       parameters: []
       responses:
@@ -923,8 +997,8 @@ paths:
       security: []
   /api/v1/auth/callback/google:
     get:
-      summary: ''
-      operationId: getApiV1AuthCallbackGoogle
+      summary: 'Callback for a google authentication'
+      operationId: callbackForAGoogleAuthentication
       description: ''
       parameters: []
       responses:
@@ -1020,7 +1094,7 @@ paths:
                       type: '->'
                     -
                       file: 'D:\files\system development\laravel\recipe-api\app\Http\Controllers\OAuthController.php'
-                      line: 25
+                      line: 33
                       function: user
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
@@ -1516,7 +1590,7 @@ paths:
                         type: '->'
                       -
                         file: 'D:\files\system development\laravel\recipe-api\app\Http\Controllers\OAuthController.php'
-                        line: 25
+                        line: 33
                         function: user
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
@@ -1939,8 +2013,8 @@ paths:
       security: []
   /api/v1/auth/redirect/github:
     get:
-      summary: ''
-      operationId: getApiV1AuthRedirectGithub
+      summary: 'Redirect for a github authentication'
+      operationId: redirectForAGithubAuthentication
       description: ''
       parameters: []
       responses:
@@ -1956,8 +2030,8 @@ paths:
       security: []
   /api/v1/auth/callback/github:
     get:
-      summary: ''
-      operationId: getApiV1AuthCallbackGithub
+      summary: 'Callback for a github authentication'
+      operationId: callbackForAGithubAuthentication
       description: ''
       parameters: []
       responses:
@@ -2053,7 +2127,7 @@ paths:
                       type: '->'
                     -
                       file: 'D:\files\system development\laravel\recipe-api\app\Http\Controllers\OAuthController.php'
-                      line: 39
+                      line: 50
                       function: user
                       class: Laravel\Socialite\Two\AbstractProvider
                       type: '->'
@@ -2549,7 +2623,7 @@ paths:
                         type: '->'
                       -
                         file: 'D:\files\system development\laravel\recipe-api\app\Http\Controllers\OAuthController.php'
-                        line: 39
+                        line: 50
                         function: user
                         class: Laravel\Socialite\Two\AbstractProvider
                         type: '->'
@@ -2967,111 +3041,6 @@ paths:
                         type:
                           type: string
                           example: '::'
-      tags:
-        - Endpoints
-      security: []
-  /api/v1/auth/forgot-password:
-    post:
-      summary: 'Handle an incoming password reset link request.'
-      operationId: handleAnIncomingPasswordResetLinkRequest
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: nadia99@example.org
-              required:
-                - email
-      security: []
-  /api/v1/auth/reset-password:
-    post:
-      summary: 'Handle an incoming new password request.'
-      operationId: handleAnIncomingNewPasswordRequest
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                token:
-                  type: string
-                  description: ''
-                  example: quis
-                email:
-                  type: string
-                  description: 'Must be a valid email address.'
-                  example: dbreitenberg@example.org
-                password:
-                  type: string
-                  description: ''
-                  example: et
-              required:
-                - token
-                - email
-                - password
-      security: []
-  '/api/v1/auth/verify-email/{id}/{hash}':
-    get:
-      summary: "Mark the authenticated user's email address as verified."
-      operationId: markTheAuthenticatedUsersEmailAddressAsVerified
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the verify email.'
-        example: et
-        required: true
-        schema:
-          type: string
-      -
-        in: path
-        name: hash
-        description: ''
-        example: debitis
-        required: true
-        schema:
-          type: string
-  /api/v1/auth/email/verification-notification:
-    post:
-      summary: 'Send a new email verification notification.'
-      operationId: sendANewEmailVerificationNotification
-      description: ''
-      parameters: []
-      responses: {  }
       tags:
         - Endpoints
       security: []

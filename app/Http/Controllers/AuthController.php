@@ -36,6 +36,9 @@ class AuthController extends Controller
         return $this->respondWithToken((string) Auth::login($user))->setStatusCode(201);
     }
 
+    /**
+     * Login
+     */
     public function login(LoginRequest $request)
     {
         return $this->respondWithToken($request->authenticate());
@@ -47,7 +50,8 @@ class AuthController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Logout
+     * @authenticated
      */
     public function destroy()
     {
@@ -56,6 +60,10 @@ class AuthController extends Controller
         return response()->noContent();
     }
 
+    /**
+     * Get refresh access token
+     * @authenticated
+     */
     public function refresh()
     {
         return $this->respondWithToken(Auth::refresh());

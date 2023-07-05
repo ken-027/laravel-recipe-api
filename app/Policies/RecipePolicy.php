@@ -29,7 +29,7 @@ class RecipePolicy
      */
     public function create(User $user, Recipe $recipe): Response
     {
-        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can modify this recipe");
+        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can modify this recipe');
     }
 
     /**
@@ -37,7 +37,7 @@ class RecipePolicy
      */
     public function update(User $user, Recipe $recipe): Response
     {
-        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can update this recipe");
+        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can update this recipe');
     }
 
     /**
@@ -45,7 +45,7 @@ class RecipePolicy
      */
     public function delete(User $user, Recipe $recipe): Response
     {
-        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can delete this recipe");
+        return $user->id === $recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can delete this recipe');
     }
 
     /**

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Recipe Api",
-        "_postman_id": "05a2b85f-08f4-4de5-8607-088109e004f1",
+        "_postman_id": "8082a657-835c-4dae-a44f-5dbc987e8f1a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,7 +20,7 @@
             "description": "",
             "item": [
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Get the list of recipes",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"est\",\"per_page\":2788007,\"page\":6941398.49987,\"tags\":\"magni\"}"
+                            "raw": "{\"search\":\"sed\",\"per_page\":199.957834,\"page\":4773064.1,\"tags\":\"quasi\"}"
                         },
                         "description": "",
                         "auth": {
@@ -77,13 +77,13 @@
                                 }
                             ],
                             "code": 200,
-                            "body": "{\"data\":[],\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/recipes\",\"per_page\":2788007,\"to\":null,\"total\":0},\"developer\":{\"name\":\"ken\",\"email\":\"api.portfolio.ken027@gmail.com\"}}",
+                            "body": "{\"data\":[],\"meta\":{\"current_page\":1,\"from\":null,\"last_page\":1,\"path\":\"http:\\\/\\\/localhost:8000\\\/api\\\/v1\\\/recipes\",\"per_page\":199,\"to\":null,\"total\":0},\"developer\":{\"name\":\"ken\",\"email\":\"api.portfolio.ken027@gmail.com\"}}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Create new recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -107,49 +107,49 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "non",
+                                    "value": "tempora",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Voluptates et eos dolores sint magni sed.",
+                                    "value": "Et in distinctio ipsam omnis laudantium assumenda culpa qui.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "servings",
-                                    "value": 0.172252,
+                                    "value": 28778.334014783,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "preparation_time",
-                                    "value": 65507152.12,
+                                    "value": 22218786.579,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "cooking_time",
-                                    "value": 6185.91,
+                                    "value": 11.725497221,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "total_time",
-                                    "value": 0.60816,
+                                    "value": 2243593,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "ingredients[0]",
-                                    "value": "animi",
+                                    "value": "provident",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "instructions[0]",
-                                    "value": "totam",
+                                    "value": "fugiat",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -160,15 +160,12 @@
                                 }
                             ]
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Display the specified recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -236,7 +233,7 @@
                     ]
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update specified recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -268,37 +265,37 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "harum",
+                                    "value": "et",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "description",
-                                    "value": "Hic consequatur id doloribus numquam unde nihil aperiam.",
+                                    "value": "Molestiae voluptatem non voluptas delectus omnis ad sunt esse.",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "servings",
-                                    "value": 4171220,
+                                    "value": 0,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "preparation_time",
-                                    "value": 144703.893544,
+                                    "value": 99818704.6,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "cooking_time",
-                                    "value": 29366573.4,
+                                    "value": 0,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "total_time",
-                                    "value": 2.82,
+                                    "value": 47.30237,
                                     "type": "text",
                                     "description": ""
                                 },
@@ -314,15 +311,12 @@
                                 }
                             ]
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Delete the specified recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -350,15 +344,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Get all instruction of a specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -426,7 +417,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Add new instruction of a recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -455,17 +446,14 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"step_number\":1.401818,\"description\":\"Nobis veritatis qui fugit vitae incidunt voluptatem.\"}"
+                            "raw": "{\"step_number\":1247,\"description\":\"Deleniti vel veritatis fugit architecto rerum.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Get the specific instruction of a recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -539,7 +527,7 @@
                     ]
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update specific instruction for a recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -574,17 +562,14 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"step_number\":33430.832961306,\"description\":\"Asperiores sapiente qui rerum inventore ut.\"}"
+                            "raw": "{\"step_number\":1467684,\"description\":\"Dolor officia rem nihil.\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Remove specific instruction for a recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -618,15 +603,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Display a listing of the resource.",
+                    "name": "Get all ingredients from specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -694,7 +676,7 @@
                     ]
                 },
                 {
-                    "name": "Store a newly created resource in storage.",
+                    "name": "Add new ingredient from a specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -723,17 +705,14 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"mollitia\",\"quantity\":333.0558172,\"unit\":\"quia\"}"
+                            "raw": "{\"name\":\"labore\",\"quantity\":73089809.44263928,\"unit\":\"a\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Display the specified resource.",
+                    "name": "Get specific ingredient from specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -807,7 +786,7 @@
                     ]
                 },
                 {
-                    "name": "Update the specified resource in storage.",
+                    "name": "Update specific ingredient from specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -842,17 +821,14 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"quaerat\",\"quantity\":2279.938541,\"unit\":\"ratione\"}"
+                            "raw": "{\"name\":\"ut\",\"quantity\":6263774,\"unit\":\"et\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Remove ingredients from it's recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -886,15 +862,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "PATCH api\/v1\/profile\/recipes\/{id}",
+                    "name": "Save specific recipe",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -922,15 +895,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "DELETE api\/v1\/profile\/recipes\/{id}",
+                    "name": "Remove specific recipe from saved recipes",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -958,15 +928,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "GET api\/v1\/profile\/recipes\/saved",
+                    "name": "Get the saved recipes",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -986,10 +953,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1018,7 +982,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/profile\/recipes",
+                    "name": "Get the recipe created",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1038,10 +1002,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1070,7 +1031,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/profile\/info",
+                    "name": "Info of authenticated user",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1090,10 +1051,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1143,7 +1101,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"vdyvpxlypmucsrpukxsjcoi\",\"email\":\"margarette63@example.org\",\"password\":\"^O@vA\\\"t!2\\\/WFU{i~\\\/\\\/W>\",\"password_confirmation\":\"repudiandae\"}"
+                            "raw": "{\"name\":\"zujyzyforeeqt\",\"email\":\"queenie14@example.com\",\"password\":\"nqa@%G\\\\pb\",\"password_confirmation\":\"officia\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1160,7 +1118,7 @@
                     ]
                 },
                 {
-                    "name": "POST api\/v1\/auth\/login",
+                    "name": "Login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1181,7 +1139,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"stehr.robyn@example.org\",\"password\":\".&E$XFjtv\"}"
+                            "raw": "{\"email\":\"lhomenick@example.org\",\"password\":\"cQ1+,lmpizTY|ytP;\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1191,7 +1149,7 @@
                     "response": []
                 },
                 {
-                    "name": "Remove the specified resource from storage.",
+                    "name": "Logout",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1211,67 +1169,12 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
                 {
-                    "name": "GET api\/v1\/auth\/info",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/info",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/info"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "http:\/\/localhost:3000"
-                                },
-                                {
-                                    "key": "access-control-allow-credentials",
-                                    "value": "true"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/v1\/auth\/refresh-token",
+                    "name": "Get refresh access token",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1291,10 +1194,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -1323,7 +1223,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/auth\/redirect\/google",
+                    "name": "Redirect for a google authentication",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1387,7 +1287,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/auth\/callback\/google",
+                    "name": "Callback for a google authentication",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1441,13 +1341,13 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\n    \"message\": \"Client error: `POST https:\/\/www.googleapis.com\/oauth2\/v4\/token` resulted in a `400 Bad Request` response:\\n{\\n  \\\"error\\\": \\\"invalid_request\\\",\\n  \\\"error_description\\\": \\\"Missing required parameter: code\\\"\\n}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 95,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 291,\n            \"function\": \"post\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 240,\n            \"function\": \"getAccessTokenResponse\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\app\\\\Http\\\\Controllers\\\\OAuthController.php\",\n            \"line\": 25,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"google_callback\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\OAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 799,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 152,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 128,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 80,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 25,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\{closure}\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 26,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 800,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 777,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 741,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 730,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 92,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 209,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 166,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 124,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 71,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 49,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 51,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 208,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 326,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 178,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1081,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 320,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 174,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "body": "{\n    \"message\": \"Client error: `POST https:\/\/www.googleapis.com\/oauth2\/v4\/token` resulted in a `400 Bad Request` response:\\n{\\n  \\\"error\\\": \\\"invalid_request\\\",\\n  \\\"error_description\\\": \\\"Missing required parameter: code\\\"\\n}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 95,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 291,\n            \"function\": \"post\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 240,\n            \"function\": \"getAccessTokenResponse\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\app\\\\Http\\\\Controllers\\\\OAuthController.php\",\n            \"line\": 33,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"google_callback\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\OAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 799,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 152,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 128,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 80,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 25,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\{closure}\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 26,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 800,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 777,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 741,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 730,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 92,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 209,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 166,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 124,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 71,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 49,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 51,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 208,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 326,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 178,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1081,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 320,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 174,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
                             "name": ""
                         }
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/auth\/redirect\/github",
+                    "name": "Redirect for a github authentication",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1511,7 +1411,7 @@
                     ]
                 },
                 {
-                    "name": "GET api\/v1\/auth\/callback\/github",
+                    "name": "Callback for a github authentication",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -1565,166 +1465,10 @@
                                 }
                             ],
                             "code": 500,
-                            "body": "{\n    \"message\": \"Client error: `GET https:\/\/api.github.com\/user` resulted in a `401 Unauthorized` response:\\n{\\\"message\\\":\\\"Bad credentials\\\",\\\"documentation_url\\\":\\\"https:\/\/docs.github.com\/rest\\\"}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 44,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\GithubProvider.php\",\n            \"line\": 42,\n            \"function\": \"get\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 243,\n            \"function\": \"getUserByToken\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\GithubProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\app\\\\Http\\\\Controllers\\\\OAuthController.php\",\n            \"line\": 39,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"github_callback\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\OAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 799,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 152,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 128,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 80,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 25,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\{closure}\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 26,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 800,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 777,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 741,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 730,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 92,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 209,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 166,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 124,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 71,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 49,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 51,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 208,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 326,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 178,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1081,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 320,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 174,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
+                            "body": "{\n    \"message\": \"Client error: `GET https:\/\/api.github.com\/user` resulted in a `401 Unauthorized` response:\\n{\\\"message\\\":\\\"Bad credentials\\\",\\\"documentation_url\\\":\\\"https:\/\/docs.github.com\/rest\\\"}\\n\",\n    \"exception\": \"GuzzleHttp\\\\Exception\\\\ClientException\",\n    \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Exception\\\\RequestException.php\",\n    \"line\": 113,\n    \"trace\": [\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Middleware.php\",\n            \"line\": 72,\n            \"function\": \"create\",\n            \"class\": \"GuzzleHttp\\\\Exception\\\\RequestException\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 209,\n            \"function\": \"GuzzleHttp\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Middleware\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 158,\n            \"function\": \"callHandler\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\TaskQueue.php\",\n            \"line\": 52,\n            \"function\": \"GuzzleHttp\\\\Promise\\\\{closure}\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 251,\n            \"function\": \"run\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\TaskQueue\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 227,\n            \"function\": \"invokeWaitFn\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 272,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 229,\n            \"function\": \"invokeWaitList\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\promises\\\\src\\\\Promise.php\",\n            \"line\": 69,\n            \"function\": \"waitIfPending\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\Client.php\",\n            \"line\": 189,\n            \"function\": \"wait\",\n            \"class\": \"GuzzleHttp\\\\Promise\\\\Promise\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\guzzlehttp\\\\guzzle\\\\src\\\\ClientTrait.php\",\n            \"line\": 44,\n            \"function\": \"request\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\GithubProvider.php\",\n            \"line\": 42,\n            \"function\": \"get\",\n            \"class\": \"GuzzleHttp\\\\Client\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\socialite\\\\src\\\\Two\\\\AbstractProvider.php\",\n            \"line\": 243,\n            \"function\": \"getUserByToken\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\GithubProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\app\\\\Http\\\\Controllers\\\\OAuthController.php\",\n            \"line\": 50,\n            \"function\": \"user\",\n            \"class\": \"Laravel\\\\Socialite\\\\Two\\\\AbstractProvider\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Controller.php\",\n            \"line\": 54,\n            \"function\": \"github_callback\",\n            \"class\": \"App\\\\Http\\\\Controllers\\\\OAuthController\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\ControllerDispatcher.php\",\n            \"line\": 43,\n            \"function\": \"callAction\",\n            \"class\": \"Illuminate\\\\Routing\\\\Controller\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 260,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\ControllerDispatcher\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Route.php\",\n            \"line\": 205,\n            \"function\": \"runController\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 799,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Routing\\\\Route\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Routing\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 152,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 128,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 80,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 25,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\{closure}\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\sanctum\\\\src\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful.php\",\n            \"line\": 26,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Laravel\\\\Sanctum\\\\Http\\\\Middleware\\\\EnsureFrontendRequestsAreStateful\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 800,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 777,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 741,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 730,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 175,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 144,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 299,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 287,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 92,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 45,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 35,\n            \"function\": \"makeResponseCallIfConditionsPass\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 209,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 166,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Extractor.php\",\n            \"line\": 95,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 124,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Extractor\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 71,\n            \"function\": \"extractEndpointsInfoFromLaravelApp\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp.php\",\n            \"line\": 49,\n            \"function\": \"extractEndpointsInfoAndWriteToDisk\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 51,\n            \"function\": \"get\",\n            \"class\": \"Knuckles\\\\Scribe\\\\GroupedEndpoints\\\\GroupedEndpointsFromApp\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 41,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 662,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 208,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 326,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 178,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1081,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 320,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 174,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 200,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"D:\\\\files\\\\system development\\\\laravel\\\\recipe-api\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}",
                             "name": ""
                         }
                     ]
-                },
-                {
-                    "name": "Handle an incoming password reset link request.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/forgot-password",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/forgot-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"nadia99@example.org\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Handle an incoming new password request.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/reset-password",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/reset-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"token\":\"quis\",\"email\":\"dbreitenberg@example.org\",\"password\":\"et\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Mark the authenticated user's email address as verified.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/verify-email\/:id\/:hash",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/verify-email\/:id\/:hash",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "et",
-                                    "description": "The ID of the verify email."
-                                },
-                                {
-                                    "id": "hash",
-                                    "key": "hash",
-                                    "value": "debitis",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "http:\/\/localhost:3000"
-                                },
-                                {
-                                    "key": "access-control-allow-credentials",
-                                    "value": "true"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "Send a new email verification notification.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/auth\/email\/verification-notification",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/auth\/email\/verification-notification"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
                 }
             ]
         }

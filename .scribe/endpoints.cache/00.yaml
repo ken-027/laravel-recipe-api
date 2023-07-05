@@ -12,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Get the list of recipes'
       description: ''
       authenticated: false
       custom: []
@@ -28,40 +28,40 @@ endpoints:
         name: search
         description: ''
         required: false
-        example: est
+        example: sed
         type: string
         custom: []
       per_page:
         name: per_page
         description: ''
         required: false
-        example: 2788007.0
+        example: 199.957834
         type: number
         custom: []
       page:
         name: page
         description: ''
         required: false
-        example: 6941398.49987
+        example: 4773064.1
         type: number
         custom: []
       tags:
         name: tags
         description: ''
         required: false
-        example: magni
+        example: quasi
         type: string
         custom: []
     cleanBodyParameters:
-      search: est
-      per_page: 2788007.0
-      page: 6941398.49987
-      tags: magni
+      search: sed
+      per_page: 199.957834
+      page: 4773064.1
+      tags: quasi
     fileParameters: []
     responses:
       -
         status: 200
-        content: '{"data":[],"meta":{"current_page":1,"from":null,"last_page":1,"path":"http:\/\/localhost:8000\/api\/v1\/recipes","per_page":2788007,"to":null,"total":0},"developer":{"name":"ken","email":"api.portfolio.ken027@gmail.com"}}'
+        content: '{"data":[],"meta":{"current_page":1,"from":null,"last_page":1,"path":"http:\/\/localhost:8000\/api\/v1\/recipes","per_page":199,"to":null,"total":0},"developer":{"name":"ken","email":"api.portfolio.ken027@gmail.com"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -86,11 +86,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Create new recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
@@ -102,14 +103,14 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: non
+        example: tempora
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: 'Voluptates et eos dolores sint magni sed.'
+        example: 'Et in distinctio ipsam omnis laudantium assumenda culpa qui.'
         type: string
         custom: []
       image:
@@ -123,28 +124,28 @@ endpoints:
         name: servings
         description: ''
         required: true
-        example: 0.172252
+        example: 28778.334014783
         type: number
         custom: []
       preparation_time:
         name: preparation_time
         description: ''
         required: true
-        example: 65507152.12
+        example: 22218786.579
         type: number
         custom: []
       cooking_time:
         name: cooking_time
         description: ''
         required: true
-        example: 6185.91
+        example: 11.725497221
         type: number
         custom: []
       total_time:
         name: total_time
         description: ''
         required: true
-        example: 0.60816
+        example: 2243593.0
         type: number
         custom: []
       ingredients:
@@ -152,7 +153,7 @@ endpoints:
         description: ''
         required: true
         example:
-          - animi
+          - provident
         type: 'string[]'
         custom: []
       instructions:
@@ -160,7 +161,7 @@ endpoints:
         description: ''
         required: true
         example:
-          - totam
+          - fugiat
         type: 'number[]'
         custom: []
       tags:
@@ -174,54 +175,57 @@ endpoints:
         name: 'ingredients[].name'
         description: ''
         required: false
-        example: enim
+        example: qui
         type: string
         custom: []
       'ingredients[].quantity':
         name: 'ingredients[].quantity'
         description: ''
         required: false
-        example: 145526.0
+        example: 230.506961
         type: number
         custom: []
       'ingredients[].unit':
         name: 'ingredients[].unit'
         description: ''
         required: false
-        example: iusto
+        example: deserunt
         type: string
         custom: []
       'instructions[].step_number':
         name: 'instructions[].step_number'
         description: ''
         required: true
-        example: 14965.483637422
+        example: 1247.305
         type: number
         custom: []
       'instructions[].description':
         name: 'instructions[].description'
         description: ''
         required: true
-        example: 'Vel ducimus qui aut.'
+        example: 'Aliquam non odio sed.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: non
-      description: 'Voluptates et eos dolores sint magni sed.'
-      servings: 0.172252
-      preparation_time: 65507152.12
-      cooking_time: 6185.91
-      total_time: 0.60816
+      name: tempora
+      description: 'Et in distinctio ipsam omnis laudantium assumenda culpa qui.'
+      servings: 28778.334014783
+      preparation_time: 22218786.579
+      cooking_time: 11.725497221
+      total_time: 2243593.0
       ingredients:
-        - animi
+        - provident
       instructions:
-        - totam
+        - fugiat
       tags: []
     fileParameters:
       image: null
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer V6ha354eadvf81k6EgDZcbP'
     controller: null
     method: null
     route: null
@@ -235,7 +239,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Display the specified recipe'
       description: ''
       authenticated: false
       custom: []
@@ -286,11 +290,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update specified recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
@@ -310,14 +315,14 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: harum
+        example: et
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: 'Hic consequatur id doloribus numquam unde nihil aperiam.'
+        example: 'Molestiae voluptatem non voluptas delectus omnis ad sunt esse.'
         type: string
         custom: []
       image:
@@ -331,28 +336,28 @@ endpoints:
         name: servings
         description: ''
         required: true
-        example: 4171220.0
+        example: 0.0
         type: number
         custom: []
       preparation_time:
         name: preparation_time
         description: ''
         required: true
-        example: 144703.893544
+        example: 99818704.6
         type: number
         custom: []
       cooking_time:
         name: cooking_time
         description: ''
         required: true
-        example: 29366573.4
+        example: 0.0
         type: number
         custom: []
       total_time:
         name: total_time
         description: ''
         required: true
-        example: 2.82
+        example: 47.30237
         type: number
         custom: []
       tags:
@@ -363,18 +368,21 @@ endpoints:
         type: object
         custom: []
     cleanBodyParameters:
-      name: harum
-      description: 'Hic consequatur id doloribus numquam unde nihil aperiam.'
-      servings: 4171220.0
-      preparation_time: 144703.893544
-      cooking_time: 29366573.4
-      total_time: 2.82
+      name: et
+      description: 'Molestiae voluptatem non voluptas delectus omnis ad sunt esse.'
+      servings: 0.0
+      preparation_time: 99818704.6
+      cooking_time: 0.0
+      total_time: 47.30237
       tags: []
     fileParameters:
       image: null
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer d58chV3efkv1g6ab6ZE4aDP'
     controller: null
     method: null
     route: null
@@ -388,11 +396,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: 'Delete the specified recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -412,7 +421,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer fce8D36461vEakPbhVdZa5g'
     controller: null
     method: null
     route: null
@@ -426,7 +438,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Get all instruction of a specific recipe'
       description: ''
       authenticated: false
       custom: []
@@ -476,11 +488,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Add new instruction of a recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -500,23 +513,26 @@ endpoints:
         name: step_number
         description: ''
         required: true
-        example: 1.401818
+        example: 1247.0
         type: number
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: 'Nobis veritatis qui fugit vitae incidunt voluptatem.'
+        example: 'Deleniti vel veritatis fugit architecto rerum.'
         type: string
         custom: []
     cleanBodyParameters:
-      step_number: 1.401818
-      description: 'Nobis veritatis qui fugit vitae incidunt voluptatem.'
+      step_number: 1247.0
+      description: 'Deleniti vel veritatis fugit architecto rerum.'
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8kd56VbDc4vgfE3aP1Z6hea'
     controller: null
     method: null
     route: null
@@ -530,7 +546,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Get the specific instruction of a recipe'
       description: ''
       authenticated: false
       custom: []
@@ -589,11 +605,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update specific instruction for a recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -621,23 +638,26 @@ endpoints:
         name: step_number
         description: ''
         required: true
-        example: 33430.832961306
+        example: 1467684.0
         type: number
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: 'Asperiores sapiente qui rerum inventore ut.'
+        example: 'Dolor officia rem nihil.'
         type: string
         custom: []
     cleanBodyParameters:
-      step_number: 33430.832961306
-      description: 'Asperiores sapiente qui rerum inventore ut.'
+      step_number: 1467684.0
+      description: 'Dolor officia rem nihil.'
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer kPZaga6bcD6eE5v8fV41hd3'
     controller: null
     method: null
     route: null
@@ -651,11 +671,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: 'Remove specific instruction for a recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -683,7 +704,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Z5defvcEakDba3hg61V68P4'
     controller: null
     method: null
     route: null
@@ -697,7 +721,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Get all ingredients from specific recipe'
       description: ''
       authenticated: false
       custom: []
@@ -747,11 +771,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Store a newly created resource in storage.'
+      title: 'Add new ingredient from a specific recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -771,31 +796,34 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: mollitia
+        example: labore
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: 333.0558172
+        example: 73089809.442639
         type: number
         custom: []
       unit:
         name: unit
         description: ''
         required: true
-        example: quia
+        example: a
         type: string
         custom: []
     cleanBodyParameters:
-      name: mollitia
-      quantity: 333.0558172
-      unit: quia
+      name: labore
+      quantity: 73089809.442639
+      unit: a
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer abkf5e6Va1gch6P4Dv3d8ZE'
     controller: null
     method: null
     route: null
@@ -809,7 +837,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display the specified resource.'
+      title: 'Get specific ingredient from specific recipe'
       description: ''
       authenticated: false
       custom: []
@@ -868,11 +896,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update the specified resource in storage.'
+      title: 'Update specific ingredient from specific recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -900,31 +929,34 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: quaerat
+        example: ut
         type: string
         custom: []
       quantity:
         name: quantity
         description: ''
         required: true
-        example: 2279.938541
+        example: 6263774.0
         type: number
         custom: []
       unit:
         name: unit
         description: ''
         required: true
-        example: ratione
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      name: quaerat
-      quantity: 2279.938541
-      unit: ratione
+      name: ut
+      quantity: 6263774.0
+      unit: et
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer VdZ5Eaf1vag6bhe86D4Pck3'
     controller: null
     method: null
     route: null
@@ -938,11 +970,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: "Remove ingredients from it's recipe"
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -970,7 +1003,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer aeZd15gP8c4avhE3Vf66Dkb'
     controller: null
     method: null
     route: null
@@ -984,11 +1020,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Save specific recipe'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1008,7 +1045,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 61Z8gvefaad5D3bkEh4cV6P'
     controller: null
     method: null
     route: null
@@ -1022,11 +1062,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Remove specific recipe from saved recipes'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -1046,7 +1087,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6bcv8aZgdkhf51VPD4E63ea'
     controller: null
     method: null
     route: null
@@ -1060,11 +1104,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get the saved recipes'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -1086,7 +1131,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 84d1v36hg6kaaPVbfEcZe5D'
     controller: null
     method: null
     route: null
@@ -1100,11 +1148,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get the recipe created'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -1126,7 +1175,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer VE8he6b4cDgZfPad3v61k5a'
     controller: null
     method: null
     route: null
@@ -1140,11 +1192,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Info of authenticated user'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -1166,7 +1219,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer eP8aD4Ekfbdvc6hV5Z6g13a'
     controller: null
     method: null
     route: null
@@ -1196,35 +1252,35 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: vdyvpxlypmucsrpukxsjcoi
+        example: zujyzyforeeqt
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: margarette63@example.org
+        example: queenie14@example.com
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: '^O@vA"t!2/WFU{i~//W>'
+        example: nqa@%G\pb
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'Must be at least 8 characters. Must not be greater than 16 characters and match with the password.'
         required: true
-        example: repudiandae
+        example: officia
         type: string
         custom: []
     cleanBodyParameters:
-      name: vdyvpxlypmucsrpukxsjcoi
-      email: margarette63@example.org
-      password: '^O@vA"t!2/WFU{i~//W>'
-      password_confirmation: repudiandae
+      name: zujyzyforeeqt
+      email: queenie14@example.com
+      password: nqa@%G\pb
+      password_confirmation: officia
     fileParameters: []
     responses:
       -
@@ -1253,7 +1309,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: Login
       description: ''
       authenticated: false
       custom: []
@@ -1269,19 +1325,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: stehr.robyn@example.org
+        example: lhomenick@example.org
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters. Must not be greater than 16 characters.'
         required: true
-        example: '.&E$XFjtv'
+        example: 'cQ1+,lmpizTY|ytP;'
         type: string
         custom: []
     cleanBodyParameters:
-      email: stehr.robyn@example.org
-      password: '.&E$XFjtv'
+      email: lhomenick@example.org
+      password: 'cQ1+,lmpizTY|ytP;'
     fileParameters: []
     responses: []
     responseFields: []
@@ -1299,11 +1355,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Remove the specified resource from storage.'
+      title: Logout
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -1315,47 +1372,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/v1/auth/info
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: 'http://localhost:3000'
-          access-control-allow-credentials: 'true'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer DZhfV436Peaak81vdc6gb5E'
     controller: null
     method: null
     route: null
@@ -1369,11 +1389,12 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Get refresh access token'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -1395,7 +1416,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer ah54a3gZP8fkdcvbDE1Ve66'
     controller: null
     method: null
     route: null
@@ -1409,7 +1433,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Redirect for a google authentication'
       description: ''
       authenticated: false
       custom: []
@@ -1464,7 +1488,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Callback for a google authentication'
       description: ''
       authenticated: false
       custom: []
@@ -1581,7 +1605,7 @@ endpoints:
                   },
                   {
                       "file": "D:\\files\\system development\\laravel\\recipe-api\\app\\Http\\Controllers\\OAuthController.php",
-                      "line": 25,
+                      "line": 33,
                       "function": "user",
                       "class": "Laravel\\Socialite\\Two\\AbstractProvider",
                       "type": "->"
@@ -2074,7 +2098,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Redirect for a github authentication'
       description: ''
       authenticated: false
       custom: []
@@ -2129,7 +2153,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Callback for a github authentication'
       description: ''
       authenticated: false
       custom: []
@@ -2246,7 +2270,7 @@ endpoints:
                   },
                   {
                       "file": "D:\\files\\system development\\laravel\\recipe-api\\app\\Http\\Controllers\\OAuthController.php",
-                      "line": 39,
+                      "line": 50,
                       "function": "user",
                       "class": "Laravel\\Socialite\\Two\\AbstractProvider",
                       "type": "->"
@@ -2724,184 +2748,6 @@ endpoints:
           access-control-allow-credentials: 'true'
         description: null
         custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/auth/forgot-password
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Handle an incoming password reset link request.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: nadia99@example.org
-        type: string
-        custom: []
-    cleanBodyParameters:
-      email: nadia99@example.org
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/auth/reset-password
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Handle an incoming new password request.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      token:
-        name: token
-        description: ''
-        required: true
-        example: quis
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address.'
-        required: true
-        example: dbreitenberg@example.org
-        type: string
-        custom: []
-      password:
-        name: password
-        description: ''
-        required: true
-        example: et
-        type: string
-        custom: []
-    cleanBodyParameters:
-      token: quis
-      email: dbreitenberg@example.org
-      password: et
-    fileParameters: []
-    responses: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: 'api/v1/auth/verify-email/{id}/{hash}'
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: "Mark the authenticated user's email address as verified."
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters:
-      id:
-        name: id
-        description: 'The ID of the verify email.'
-        required: true
-        example: et
-        type: string
-        custom: []
-      hash:
-        name: hash
-        description: ''
-        required: true
-        example: debitis
-        type: string
-        custom: []
-    cleanUrlParameters:
-      id: et
-      hash: debitis
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: 'http://localhost:3000'
-          access-control-allow-credentials: 'true'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/auth/email/verification-notification
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Send a new email verification notification.'
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses: []
     responseFields: []
     auth: []
     controller: null

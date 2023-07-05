@@ -29,7 +29,7 @@ class IngredientPolicy
      */
     public function create(User $user, Ingredient $ingredient): Response
     {
-        return $user->id === $ingredient->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, "Only author can add ingredients!");
+        return $user->id === $ingredient->recipe->user_id ? Response::allow() : Response::denyWithStatus(403, 'Only author can add ingredients!');
     }
 
     /**

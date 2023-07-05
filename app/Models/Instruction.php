@@ -13,6 +13,7 @@ class Instruction extends Model
     use HasFactory, HasUuids, SoftDeletes;
 
     protected $fillable = ['step_number', 'description', 'recipe_id'];
+
     protected $appends = ['full'];
 
     public function recipe(): BelongsTo

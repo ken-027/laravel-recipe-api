@@ -16,8 +16,9 @@ class InstructionController extends Controller
     {
         $this->middleware('auth:api')->except(['index', 'show']);
     }
+
     /**
-     * Display a listing of the resource.
+     * Get all instruction of a specific recipe
      */
     public function index(Instruction $instruction, $recipe_id)
     {
@@ -27,7 +28,8 @@ class InstructionController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Add new instruction of a recipe
+     * @authenticated
      */
     public function store(StoreInstructionRequest $request, $recipe_id): RecipeResource
     {
@@ -35,23 +37,26 @@ class InstructionController extends Controller
 
         Gate::authorize('create', $recipe);
 
-        if (!Instruction::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated)
+        if (!Instruction::firstOrCreate([...$request->validated(), 'recipe_id' => $recipe_id])->wasRecentlyCreated) {
             abort(422, 'already created this step!');
+        }
 
         return new RecipeResource($recipe);
     }
 
     /**
-     * Display the specified resource.
+     * Get the specific instruction of a recipe
      */
     public function show(Instruction $instruction, $recipe_id, $id)
     {
         Recipe::find($recipe_id) ?? abort(422, "Recipe $recipe_id not found!");
+
         return new InstructionResource($instruction->find($id) ?? abort(422, "Instruction $id not found!"));
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update specific instruction for a recipe
+     * @authenticated
      */
     public function update(UpdateInstructionRequest $request, $recipe_id, $id): InstructionResource
     {
@@ -62,11 +67,13 @@ class InstructionController extends Controller
         Gate::authorize('update', $instruction);
 
         $instruction->update($request->validated());
+
         return new InstructionResource($instruction);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove specific instruction for a recipe
+     * @authenticated
      */
     public function destroy(Instruction $instruction, $recipe_id, $id)
     {
